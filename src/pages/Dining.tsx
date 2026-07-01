@@ -8,7 +8,7 @@ export const Dining: React.FC = () => {
   return (
     <div className="bg-luxury-cream overflow-hidden">
       {/* 1. Page Hero Banner */}
-      <section className="relative h-[35vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -40,11 +40,9 @@ export const Dining: React.FC = () => {
             </div>
             <div className="space-y-6 body-text mt-8">
               <p>
-                Enjoy a unique dining experience on our cantilevered deck, where great food meets a charming and memorable setting. Whether you are enjoying breakfast, snacks, or dinner, our deck offers a special space to relax and enjoy every moment.
-              </p>
+At Tehri LakeView Sunrise Cottages, our restaurant offers a delightful culinary experience with a variety of Indian, Chinese, and local Uttarakhand dishes. Prepared using fresh ingredients and traditional recipes, every meal is crafted to satisfy your taste and complement your stay amidst the scenic beauty of Tehri Lake.              </p>
               <p>
-                Perfect for family dining, casual meals, and memorable gatherings, our dining area adds a distinctive touch to your stay at Tehri Lakeview. Enjoy fresh breezes, blue skies, and panoramas that change as the sun slides across the horizon.
-              </p>
+Whether you're starting your day with a hearty breakfast, enjoying a family lunch, or ending the evening with a delicious dinner, our warm hospitality and inviting ambiance ensure a memorable dining experience for every guest. We take pride in serving food that brings comfort, flavor, and happiness to your table.              </p>
             </div>
           </motion.div>
 
@@ -176,15 +174,14 @@ export const Dining: React.FC = () => {
             className="order-1 lg:order-2"
           >
             <h2 className="section-heading mb-4">
-              Bhagirathi Bistro Feast
+              Taste the Flavors of the Himalayas
             </h2>
             <div className="flex justify-start my-4">
               <div className="w-16 h-[1px] bg-luxury-gold/50" />
             </div>
             <div className="space-y-6 body-text mt-8">
               <p>
-                Enjoy the royal taste of tradition at Bhagirathi Bistro. Our special dining experience brings together rich Garhwali flavors, fresh organic recipes, and a warm mountain setting for every guest.
-              </p>
+Savor delicious meals while overlooking the breathtaking beauty of Tehri Lake. Freshly prepared with care, our menu brings together authentic Garhwali flavors and popular Indian favorites, creating a memorable dining experience for every guest.              </p>
               <p>
                 Guests can enjoy a variety of freshly prepared dishes, perfect for family dinners, cozy couples, and special celebrations.
               </p>

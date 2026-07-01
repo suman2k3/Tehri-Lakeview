@@ -188,13 +188,13 @@ export const Home: React.FC = () => {
       title: 'Tehri Dam Viewpoint',
       description: 'A massive reservoir viewpoint offering breathtaking panoramic views of the entire aqua lake and surrounding green peaks.',
       distance: '6 km',
-      image: images.hero.bg
+      image: images.lake.viewpoint
     },
     {
       title: 'Kodia Jungle',
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
-      image: images.hero.about
+      image: images.lake.jungle
     }
   ];
   // Auto-play timer for Rooms slider
@@ -254,7 +254,7 @@ export const Home: React.FC = () => {
   return (
     <div className="overflow-hidden bg-luxury-cream text-luxury-slate">
       {/* 1. Hero Banner */}
-      <section className="relative h-[65vh] flex items-center justify-center text-center overflow-hidden bg-luxury-charcoal">
+      <section className="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-luxury-charcoal">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
@@ -269,7 +269,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 1 }}
             className="hero-heading !text-white mb-4"
           >
-            A Sunrise Sanctuary on Tehri Lake
+            Welcome To Tehri Lakeview Sunrise Cottages
           </motion.h1>
 
           <motion.p
@@ -278,7 +278,7 @@ export const Home: React.FC = () => {
             transition={{ duration: 1, delay: 0.3 }}
             className="sub-heading !text-gray-200 max-w-2xl mx-auto mb-6"
           >
-            An intimate luxury cottage retreat rooted in heritage and grace
+            Peaceful Stay Near Tehri Lake
           </motion.p>
         </div>
       </section>
@@ -297,15 +297,17 @@ export const Home: React.FC = () => {
           <GoldDivider />
 
           <p className="sub-heading max-w-3xl mx-auto mb-6">
-            A private sanctuary where nature and quiet luxury come together.
+            Where Mountain Serenity Meets Lakeside Comfort.
           </p>
 
           <div className="space-y-6 body-text max-w-3xl mx-auto mb-10">
             <p>
-              Set across scenic mountain ridges along the Bhagirathi Zakhli Road, Tehri Lakeview features gentle landscapes, dramatic vistas, and sweeping green views of the Himalayas. Designed with refined wood chalets, every detail invites calm, space, and privacy.
+              Nestled in the scenic hills overlooking the magnificent Tehri Lake, Tehri Lakeview Sunrise Cottages is a peaceful retreat designed for travelers seeking comfort, breathtaking views, and authentic Himalayan hospitality.
             </p>
             <p>
-              Perfectly positioned for both seclusion and exploration, our cottages offer a peaceful escape while remaining close to the adventure and water sports of Tehri Lake. Guests arrive for rest and leave with memories that linger.
+              Wake up to golden sunrises over the lake, unwind in thoughtfully designed private cottages, and immerse yourself in the tranquil beauty of Uttarakhand. Whether you're planning a romantic getaway, a family vacation, or a quiet escape from city life, every stay promises relaxation, comfort, and unforgettable memories.
+
+Surrounded by majestic mountains and fresh mountain air, our cottages offer the perfect balance of modern comforts and natural charm.
             </p>
           </div>
 
@@ -456,10 +458,10 @@ export const Home: React.FC = () => {
             
             <div className="space-y-6 body-text mt-8">
               <p>
-                Experience dining at Tehri Lakeview with the charming setting and traditional flavours of our Himalayan menu, offering authentic local delicacies, special thalis, and seasonal dishes in a warm space perfect for every occasion.
+                At Tehri LakeView Sunrise Cottages, our restaurant offers a delightful culinary experience with a variety of Indian, Chinese, and local Uttarakhand dishes. Prepared using fresh ingredients and traditional recipes, every meal is crafted to satisfy your taste and complement your stay amidst the scenic beauty of Tehri Lake.
               </p>
               <p>
-                Enjoy a unique dining experience at our Bistro, from the rich traditional flavours of local Garhwali meals to global cuisines, perfect for every meal and occasion.
+                Whether you're starting your day with a hearty breakfast, enjoying a family lunch, or ending the evening with a delicious dinner, our warm hospitality and inviting ambiance ensure a memorable dining experience for every guest.
               </p>
             </div>
           </motion.div>

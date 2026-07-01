@@ -4,6 +4,7 @@ import dividerImg from '../assets/images/divider.png';
 import heroBg from '../assets/images/hero/hero_bg.png';
 import subpageHero from '../assets/images/hero/subpage_hero.png';
 import aboutBg from '../assets/images/hero/about_bg.jpg';
+import contactBg from '../assets/images/hero/contact_bg.png';
 import cottageInt from '../assets/images/cottages/cottage_interior.jpg';
 import cottageExt from '../assets/images/cottages/cottage_exterior.png';
 import roomInt1 from '../assets/images/rooms/room_interior_1.jpg';
@@ -13,7 +14,9 @@ import menu1 from '../assets/images/food/menu_1.jpg';
 import menu2 from '../assets/images/food/menu_2.jpg';
 import boating from '../assets/images/activities/boating.png';
 import adventure from '../assets/images/activities/adventure.jpg';
-import lakeView from '../assets/images/lake/lake_view.png';
+import dobraChantiBridge from '../assets/images/lake/dobra_chanti_bridge.jpg';
+import tehriDamViewpoint from '../assets/images/lake/tehri_dam_viewpoint.jpg';
+import kodiaJungle from '../assets/images/lake/kodia_jungle.jpg';
 import familyView from '../assets/images/family/family_view.jpg';
 
 import gallery1 from '../assets/images/gallery/gallery_1.png';
@@ -30,6 +33,7 @@ export const images = {
     bg: heroBg,
     subpageBg: subpageHero,
     about: aboutBg,
+    contact: contactBg,
   },
   rooms: {
     deluxe: roomInt1,
@@ -57,7 +61,9 @@ export const images = {
     adventure: adventure,
   },
   lake: {
-    sunrise: lakeView,
+    sunrise: dobraChantiBridge,
+    viewpoint: tehriDamViewpoint,
+    jungle: kodiaJungle,
   },
   family: {
     group: familyView,

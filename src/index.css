@@ -4,7 +4,7 @@
 
 @theme {
   --color-luxury-gold: #C5A880;
-  --color-luxury-cream: #FDFBF7;
+  --color-luxury-cream: #FEFDF5;
   --color-luxury-charcoal: #1E2229;
   --color-luxury-slate: #2D3139;
   --color-luxury-bronze: #B07D4C;
@@ -32,7 +32,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FDFBF7;
+  background: #FEFDF5;
 }
 
 ::-webkit-scrollbar-thumb {

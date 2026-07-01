@@ -74,13 +74,13 @@ export const About: React.FC = () => {
       title: 'Tehri Dam Viewpoint',
       description: 'A massive reservoir viewpoint offering breathtaking panoramic views of the entire aqua lake and surrounding green peaks.',
       distance: '6 km',
-      image: images.hero.bg
+      image: images.lake.viewpoint
     },
     {
       title: 'Kodia Jungle',
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
-      image: images.hero.about
+      image: images.lake.jungle
     }
   ];
 
@@ -142,7 +142,7 @@ export const About: React.FC = () => {
   return (
     <div className="bg-luxury-cream overflow-hidden">
       {/* 1. Page Hero Banner */}
-      <section className="relative h-[35vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -174,14 +174,12 @@ export const About: React.FC = () => {
             </div>
             <div className="space-y-6 body-text mt-8">
               <p>
-                Welcome to Tehri Lakeview Sunrise Cottages. Here, experience the absolute privacy and natural beauty of our boutique mountain escape. Spaced generously along a scenic crest, our cottages offer panoramic windows overlooking the aqua-blue waters of Tehri Lake and the snow peaks beyond.
-              </p>
+At Tehri Lakeview Sunrise Cottages, guests can wake up to breathtaking views of the majestic Tehri Lake and surrounding hills. The serene environment, fresh mountain air, and peaceful atmosphere make it an ideal destination for nature lovers and travelers seeking relaxation away from the hustle and bustle of city life.
+Our rooms are thoughtfully designed with modern amenities to ensure a comfortable and enjoyable stay. Each room is equipped with comfortable bedding, clean interiors, attached bathrooms, and essential facilities to make your visit convenient and memorable.              </p>
               <p>
-                Our signature architecture is the A-frame chalet. By utilizing steep pitched roofs, we evoke the classical charm of alpine cottages, while our expansive floor-to-ceiling glass frontages welcome the mountain sun. Every detail—from the cedar panels to the wooden lofts and floating balconies—is crafted to provide a warm, tactile connection with nature.
-              </p>
+Guests can explore nearby attractions, enjoy boating activities at Tehri Lake, take scenic walks through the beautiful landscapes, or simply relax and admire the stunning views from the property. The location offers the perfect balance of adventure and tranquility for visitors of all ages.              </p>
               <p>
-                Here, luxury is not measured by gilded accents, but by the quiet sound of mountain wind, the sight of golden dawn creeping across the water, and the warm comfort of a crackling fire on a cold night.
-              </p>
+Whether you are visiting for leisure, a family gathering, a romantic getaway, or a business retreat, Tehri Lakeview Sunrise Cottages provides the perfect setting for creating unforgettable memories. We look forward to welcoming you and making your stay truly special.              </p>
             </div>
           </motion.div>
 
@@ -241,7 +239,7 @@ export const About: React.FC = () => {
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="section-label mb-3">GUEST REVIEWS</span>
             <h2 className="section-heading !text-white">
-              Guest Experiences at New Tehri
+              Tehri Lakeview Sunrise Cottages
             </h2>
             <GoldDivider />
           </div>

@@ -63,19 +63,19 @@ export const Footer: React.FC = () => {
             </h3>
             <ul className="space-y-2 footer-typography">
               <li>
-                <a href="#terms" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                <Link to="/terms" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
                   Terms &amp; Conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#cancellation" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                <Link to="/cancellation" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
                   Cancellation Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#privacy" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                <Link to="/privacy" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-start">
                 <MapPin className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0 mt-0.5" />
                 <span className="text-gray-400 font-light leading-relaxed">
-                  Bhagirathi Zakhli Road, Near Tehri Lake, New Tehri, Uttarakhand 249001
+                  Kutta Zakh Road, Tehri, Uttarakhand 249001
                 </span>
               </li>
               <li className="flex items-center">
@@ -100,8 +100,8 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0" />
-                <a href="mailto:reservation@tehrilakeview.com" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
-                  reservation@tehrilakeview.com
+                <a href="mailto:info@tehrilakeview.com" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                  info@tehrilakeview.com
                 </a>
               </li>
             </ul>

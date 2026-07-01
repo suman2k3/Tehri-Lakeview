@@ -34,7 +34,7 @@ export const Rooms: React.FC = () => {
   return (
     <div className="bg-luxury-cream overflow-hidden min-h-screen">
       {/* 1. Page Hero Banner */}
-      <section className="relative h-[35vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{

@@ -30,7 +30,7 @@ export const Navbar: React.FC = () => {
             <img
               src={images.logo.main}
               alt="Tehri Lakeview Sunrise Cottages Logo"
-              className="h-14 w-auto object-contain bg-white/10 rounded-full p-0.5 group-hover:scale-105 transition-transform duration-300"
+              className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="flex flex-col">
               <span className="font-serif text-lg md:text-xl font-medium tracking-widest leading-none text-luxury-charcoal">

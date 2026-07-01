@@ -8,6 +8,9 @@ import { Rooms } from './pages/Rooms';
 import { Dining } from './pages/Dining';
 import { Gallery } from './pages/Gallery';
 import { Contact } from './pages/Contact';
+import { Terms } from './pages/Terms';
+import { Cancellation } from './pages/Cancellation';
+import { Privacy } from './pages/Privacy';
 
 // ScrollToTop helper component to reset scroll position on route changes
 const ScrollToTop: React.FC = () => {
@@ -37,6 +40,9 @@ const App: React.FC = () => {
             <Route path="/dining" element={<Dining />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/cancellation" element={<Cancellation />} />
+            <Route path="/privacy" element={<Privacy />} />
           </Routes>
         </main>
 

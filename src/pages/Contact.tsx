@@ -64,7 +64,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="bg-luxury-cream overflow-hidden">
       {/* 1. Hero Banner */}
-      <section className="relative h-[35vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -189,7 +189,7 @@ export const Contact: React.FC = () => {
                 <Mail className="w-4 h-4 stroke-[1.5]" />
               </div>
               <a href="mailto:reservation@tehrilakeview.com" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
-                reservation@tehrilakeview.com
+                info@tehrilakeview.com
               </a>
             </div>
 
@@ -199,7 +199,7 @@ export const Contact: React.FC = () => {
                 <MapPin className="w-4 h-4 stroke-[1.5]" />
               </div>
               <span className="body-text !text-sm text-gray-700 font-light leading-relaxed max-w-xs">
-                Bhagirathi Zakhli Road, Near Tehri Lake, New Tehri, Uttarakhand 249001
+                Kutta Zakh Road, Tehri, Uttarakhand 249001
               </span>
             </div>
 
@@ -209,7 +209,7 @@ export const Contact: React.FC = () => {
                 <Phone className="w-4 h-4 stroke-[1.5]" />
               </div>
               <a href="tel:+919883113966" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
-                +919883113966
+                977-444-666-888
               </a>
             </div>
           </div>
@@ -220,7 +220,7 @@ export const Contact: React.FC = () => {
       <section className="h-96 w-full border-t border-luxury-gold/15 bg-gray-100">
         <iframe
           title="Tehri Lakeview Sunrise Cottages Location Map"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13778.683691689255!2d78.44111326447814!3d30.374526685121876!2m3!1f0!2f0!3f0!3m2!1i1024|2i768|4f13.1!3m3!1m2!1s0x3909ad15fa57c8bf%3A0xc3911bf430b805c8!2sNew%20Tehri%2C%20Uttarakhand%20249001!5e0!3m2!1sen!2sin!4v1782548810022!5m2!1sen!2sin"
+          src="https://maps.google.com/maps?q=Tehri%20Lake%20View%20Sunrise%20Cottages,%20New%20Tehri,%20Uttarakhand&t=&z=16&ie=UTF8&iwloc=&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
