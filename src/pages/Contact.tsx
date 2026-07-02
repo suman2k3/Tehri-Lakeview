@@ -72,7 +72,7 @@ export const Contact: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW</span>
+          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
           <h1 className="hero-heading !text-white">
             Get In Touch
           </h1>
@@ -106,7 +106,7 @@ export const Contact: React.FC = () => {
             className="text-left"
           >
             <h2 className="section-heading mb-4">
-              Get in Touch with Tehri Lakeview
+              Get in Touch with Tehri Lakeview Sunrise Cottages
             </h2>
             <p className="body-text mb-8 max-w-lg">
               We're here to assist you with bookings, inquiries, and special requests reach out anytime for a seamless stay experience.

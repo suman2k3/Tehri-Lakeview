@@ -196,12 +196,6 @@ export const Home: React.FC = () => {
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
       image: images.lake.jungle
-    },
-    {
-      title: 'Surkanda Devi Mandir',
-      description: 'Surkanda Devi Mandir is a highly revered Hindu temple and one of the 51 sacred Shakti Peethas.',
-      distance: '26 km',
-      image: images.lake.surkandaDevi
     }
   ];
   // Auto-play timer for Rooms slider
@@ -362,34 +356,12 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             onScroll={handleRoomsScroll}
             className="flex flex-row overflow-x-auto gap-6 pb-6 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 md:gap-8 scrollbar-none"
           >
-            {/* Room 1: Economy Rooms */}
+            {/* Room 1 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
-            >
-              <div className="h-80 overflow-hidden">
-                <img
-                  src={images.rooms.premium}
-                  alt="Economy Rooms"
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5 border-t border-luxury-gold/10 text-center">
-                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Economy Rooms
-                </h3>
-              </div>
-            </motion.div>
-
-            {/* Room 2: Comfort Cottage */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
             >
               <div className="h-80 overflow-hidden">
@@ -406,12 +378,12 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               </div>
             </motion.div>
 
-            {/* Room 3: A-Frame Cottage */}
+            {/* Room 2 */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
             >
               <div className="h-80 overflow-hidden">
@@ -424,6 +396,28 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
                   A-Frame Cottage
+                </h3>
+              </div>
+            </motion.div>
+
+            {/* Room 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
+            >
+              <div className="h-80 overflow-hidden">
+                <img
+                  src={images.rooms.premium}
+                  alt="Economy Rooms"
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 border-t border-luxury-gold/10 text-center">
+                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
+                  Economy Rooms
                 </h3>
               </div>
             </motion.div>
@@ -480,7 +474,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
           >
             <img
               src={images.food.diningBg}
-              alt="Dining Experience at Tehri Lakeview"
+              alt="Dining Experience at Tehri Lakeview SUNRISE COTTAGES"
               className="w-full h-80 object-cover hover:scale-103 transition-transform duration-500"
             />
           </motion.div>

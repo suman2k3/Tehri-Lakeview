@@ -56,7 +56,7 @@ export const Terms: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW</span>
+          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
           <h1 className="hero-heading !text-white">
             Terms &amp; Conditions
           </h1>
@@ -68,7 +68,7 @@ export const Terms: React.FC = () => {
         <div className="text-center mb-12">
           <h2 className="section-heading mb-4">Terms &amp; Conditions</h2>
           <p className="sub-heading !text-gray-500 max-w-2xl mx-auto">
-            Please review our booking policies and house rules before scheduling your visit to Tehri Lakeview.
+            Please review our booking policies and house rules before scheduling your visit to Tehri Lakeview SUNRISE COTTAGES.
           </p>
         </div>
 
