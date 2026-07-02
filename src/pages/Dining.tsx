@@ -189,24 +189,14 @@ Savor delicious meals while overlooking the breathtaking beauty of Tehri Lake. F
 
             {/* Bullet List Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-              <div className="flex items-center space-x-2">
-                <span className="w-5 h-5 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold">
-                  <Check className="w-3 h-3 stroke-[2.5]" />
-                </span>
-                <span className="body-text !text-sm">Traditional Garhwali dishes</span>
-              </div>
+              
               <div className="flex items-center space-x-2">
                 <span className="w-5 h-5 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold">
                   <Check className="w-3 h-3 stroke-[2.5]" />
                 </span>
                 <span className="body-text !text-sm">Fresh seasonal preparations</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <span className="w-5 h-5 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold">
-                  <Check className="w-3 h-3 stroke-[2.5]" />
-                </span>
-                <span className="body-text !text-sm">Special thali options</span>
-              </div>
+              
               <div className="flex items-center space-x-2">
                 <span className="w-5 h-5 rounded-full bg-luxury-gold/10 flex items-center justify-center text-luxury-gold">
                   <Check className="w-3 h-3 stroke-[2.5]" />
@@ -218,7 +208,7 @@ Savor delicious meals while overlooking the breathtaking beauty of Tehri Lake. F
             {/* Action CTA */}
             <div className="mt-8">
               <button 
-                onClick={() => window.open(images.food.menu1, '_blank')}
+                onClick={() => window.open(images.food.menuPdf, '_blank')}
                 className="btn-typography bg-luxury-gold text-white px-8 py-3.5 rounded hover:bg-luxury-charcoal transition-all duration-300 shadow-md hover:shadow-lg cursor-pointer"
               >
                 Explore Menu

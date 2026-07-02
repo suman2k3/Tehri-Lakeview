@@ -38,10 +38,6 @@ export const Terms: React.FC = () => {
           content: 'To preserve the tranquil sanctuary of Tehri Lake and respect neighboring guests, loud music, portable speakers, and high-noise gatherings are strictly prohibited between 10:00 PM and 7:00 AM.'
         },
         {
-          heading: 'Pet Policies',
-          content: 'Pets are welcome only on prior written request and confirmation. Pet owners are fully responsible for the cleanup, behavior, and any property damage caused by their pets during their stay.'
-        },
-        {
           heading: 'Damages & Liability',
           content: 'Any breakage, staining of linens, structural damages, or loss of cottage keys/amenities will be billed directly to the guest prior to checkout based on restoration costs.'
         }

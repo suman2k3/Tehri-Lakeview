@@ -104,6 +104,56 @@ export const Footer: React.FC = () => {
                   info@tehrilakeview.com
                 </a>
               </li>
+              <li className="flex items-center pt-2">
+                <div className="flex items-center space-x-4 pl-[26px]">
+                  <a
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-luxury-gold transition-colors duration-300"
+                    aria-label="Facebook"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/tehrilakeviewsunrisecottages/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-luxury-gold transition-colors duration-300"
+                    aria-label="Instagram"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="w-6 h-6"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -111,7 +161,7 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright */}
         <div className="mt-12 pt-6 border-t border-white/5 text-center footer-typography !text-gray-500">
           <p>
-            &copy; {new Date().getFullYear()} Tehri Lakeview Sunrise Cottages. All Rights Reserved. Powered by Himalayan Hospitality.
+            &copy; {new Date().getFullYear()} Tehri Lakeview Sunrise Cottages. All Rights Reserved.
           </p>
         </div>
       </div>

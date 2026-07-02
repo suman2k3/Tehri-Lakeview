@@ -88,12 +88,12 @@ export const Contact: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="rounded overflow-hidden shadow-md"
+            className="rounded overflow-hidden shadow-md w-full h-80 sm:h-96 md:h-[450px] relative"
           >
             <img
-              src={images.cottages.exterior}
+              src={images.cottages.exteriorNight}
               alt="Tehri Lakeview Sunrise Cottages Property"
-              className="w-full h-80 sm:h-96 md:h-[450px] object-cover hover:scale-103 transition-transform duration-700"
+              className="w-full h-full object-cover origin-top scale-[1.4] hover:scale-[1.45] transition-transform duration-700"
             />
           </motion.div>
 
@@ -220,7 +220,7 @@ export const Contact: React.FC = () => {
       <section className="h-96 w-full border-t border-luxury-gold/15 bg-gray-100">
         <iframe
           title="Tehri Lakeview Sunrise Cottages Location Map"
-          src="https://maps.google.com/maps?q=Tehri%20Lake%20View%20Sunrise%20Cottages,%20New%20Tehri,%20Uttarakhand&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d78.4491132!3d30.4000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3908e3003f77a6f5%3A0xa14372b85a91fd0c!2sTehri%20Lake%20View%20Sunrise%20Cottages%20%7C%20Best%20Cottages%20in%20Tehri%20Lake!5e0!3m2!1sen!2sin!4v1719830000000!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}

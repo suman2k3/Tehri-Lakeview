@@ -36,7 +36,7 @@ export const Navbar: React.FC = () => {
               <span className="font-serif text-lg md:text-xl font-medium tracking-widest leading-none text-luxury-charcoal">
                 TEHRI LAKEVIEW
               </span>
-              <span className="font-sans text-[8px] uppercase tracking-[0.25em] text-luxury-gold mt-1">
+              <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.25em] text-luxury-gold mt-1">
                 Sunrise Cottages
               </span>
             </div>

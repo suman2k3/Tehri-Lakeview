@@ -81,6 +81,12 @@ export const About: React.FC = () => {
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
       image: images.lake.jungle
+    },
+    {
+      title: 'Surkanda Devi Mandir',
+      description: 'Surkanda Devi Mandir is a highly revered Hindu temple and one of the 51 sacred Shakti Peethas.',
+      distance: '26 km',
+      image: images.lake.surkandaDevi
     }
   ];
 
@@ -151,8 +157,8 @@ export const About: React.FC = () => {
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="section-label !text-luxury-gold mb-3">ABOUT</span>
-          <h1 className="hero-heading !text-white">
-            Tehri Lakeview
+          <h1 className="hero-heading !text-white !text-3xl md:!text-5xl">
+            Tehri lakeview sunrise cottages
           </h1>
         </div>
       </section>
@@ -208,9 +214,9 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
             {/* Left Image (lower) */}
             <div className="absolute left-4 bottom-4 w-[50%] z-10 shadow-xl border-4 border-white rounded overflow-hidden">
               <img
-                src={images.cottages.interior}
-                alt="Chalet Interior Room"
-                className="w-full h-48 sm:h-64 object-cover hover:scale-103 transition-transform duration-500"
+                src={images.rooms.suiteHome}
+                alt="Boutique A-Frame Cottages"
+                className="w-full h-48 sm:h-64 object-cover scale-[1.2] origin-center hover:scale-[1.25] transition-transform duration-500"
               />
             </div>
 

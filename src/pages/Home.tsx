@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../config/images';
+import heroVideo from '../assets/videos/hero_video.mp4';
 
 // Custom Gold Loop Divider component to match the screenshot decoration
 // Custom Gold Loop Divider component to match the screenshot decoration
@@ -195,6 +196,12 @@ export const Home: React.FC = () => {
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
       image: images.lake.jungle
+    },
+    {
+      title: 'Surkanda Devi Mandir',
+      description: 'Surkanda Devi Mandir is a highly revered Hindu temple and one of the 51 sacred Shakti Peethas.',
+      distance: '26 km',
+      image: images.lake.surkandaDevi
     }
   ];
   // Auto-play timer for Rooms slider
@@ -254,15 +261,16 @@ export const Home: React.FC = () => {
   return (
     <div className="overflow-hidden bg-luxury-cream text-luxury-slate">
       {/* 1. Hero Banner */}
-      <section className="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-luxury-charcoal">
+      <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center text-center overflow-hidden bg-luxury-charcoal">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url(${images.hero.bg})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url(${images.hero.bg})`,
+            filter: 'brightness(1.15)',
           }}
         />
 
-        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white mt-12">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white mt-12 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -322,21 +330,17 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             </div>
           </div>
 
-          {/* Video Placeholder Container */}
-          <div className="relative max-w-3xl mx-auto rounded overflow-hidden shadow-2xl border-4 border-white group cursor-pointer">
-            <img
-              src={images.hero.about}
-              alt="Tehri Lakeview Sunrise Cottages Property"
-              className="w-full h-96 object-cover group-hover:scale-103 transition-transform duration-700"
-            />
-            {/* Play Button Overlay */}
-            <div className="absolute inset-0 bg-black/20 flex items-center justify-center transition-colors duration-300 group-hover:bg-black/35">
-              <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-black/10 text-white shadow-lg transition-transform duration-300 group-hover:scale-110">
-                <svg className="w-6 h-6 fill-current ml-1" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
-            </div>
+          {/* Video Player Container */}
+          <div className="relative max-w-3xl mx-auto rounded overflow-hidden shadow-2xl border-4 border-white bg-black">
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              className="w-full h-96 object-cover"
+            >
+              <source src={heroVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
@@ -358,56 +362,12 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             onScroll={handleRoomsScroll}
             className="flex flex-row overflow-x-auto gap-6 pb-6 snap-x snap-mandatory md:grid md:grid-cols-3 md:overflow-x-visible md:pb-0 md:gap-8 scrollbar-none"
           >
-            {/* Room 1 */}
+            {/* Room 1: Economy Rooms */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
-            >
-              <div className="h-80 overflow-hidden">
-                <img
-                  src={images.rooms.deluxe}
-                  alt="Deluxe Room"
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5 border-t border-luxury-gold/10 text-center">
-                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Deluxe Room
-                </h3>
-              </div>
-            </motion.div>
-
-            {/* Room 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
-            >
-              <div className="h-80 overflow-hidden">
-                <img
-                  src={images.cottages.interior}
-                  alt="Suite Room"
-                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5 border-t border-luxury-gold/10 text-center">
-                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Suite Room
-                </h3>
-              </div>
-            </motion.div>
-
-            {/* Room 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
               className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
             >
               <div className="h-80 overflow-hidden">
@@ -420,6 +380,50 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
                   Economy Rooms
+                </h3>
+              </div>
+            </motion.div>
+
+            {/* Room 2: Comfort Cottage */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
+            >
+              <div className="h-80 overflow-hidden">
+                <img
+                  src={images.rooms.deluxe}
+                  alt="Comfort Cottage"
+                  className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 border-t border-luxury-gold/10 text-center">
+                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
+                  Comfort Cottage
+                </h3>
+              </div>
+            </motion.div>
+
+            {/* Room 3: A-Frame Cottage */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded overflow-hidden shadow border border-luxury-gold/15 flex flex-col group w-[85%] sm:w-[45%] md:w-auto flex-shrink-0 snap-start"
+            >
+              <div className="h-80 overflow-hidden">
+                <img
+                  src={images.rooms.suiteHome}
+                  alt="A-Frame Cottage"
+                  className="w-full h-full object-cover object-left-top group-hover:scale-103 transition-transform duration-500"
+                />
+              </div>
+              <div className="p-5 border-t border-luxury-gold/10 text-center">
+                <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
+                  A-Frame Cottage
                 </h3>
               </div>
             </motion.div>
