@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Users, Maximize2, Wifi, Car, ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../config/images';
+import roomsHero from '../assets/images/rooms_hero.png';
 
 // Import Deluxe Room Gallery Images
 
@@ -97,9 +98,9 @@ export const Rooms: React.FC = () => {
       {/* 1. Page Hero Banner */}
       <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-bottom"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(${images.rooms.executive})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(${roomsHero})`,
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

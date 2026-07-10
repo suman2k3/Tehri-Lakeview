@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
+          <Link to="/" onClick={() => setIsOpen(false)} className="flex items-center space-x-3 group">
             <img
               src={images.logo.main}
               alt="Tehri Lakeview Sunrise Cottages Logo"
@@ -36,8 +36,8 @@ export const Navbar: React.FC = () => {
               <span className="font-serif text-lg md:text-xl font-medium tracking-widest leading-none text-luxury-charcoal">
                 TEHRI LAKEVIEW
               </span>
-              <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.25em] text-luxury-gold mt-1">
-                Sunrise Cottages
+              <span className="font-sans text-[13px] md:text-[15px] uppercase tracking-[0.06em] mt-1 text-[#72A07C] font-semibold">
+                SUNRISE COTTAGES
               </span>
             </div>
           </Link>

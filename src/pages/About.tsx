@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../config/images';
 import { GoldDivider } from './Home';
+import aboutHero from '../assets/images/about_hero.png';
 
 export const About: React.FC = () => {
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
@@ -64,6 +65,12 @@ export const About: React.FC = () => {
   ];
 
   const attractions = [
+    {
+      title: 'Tehri Lake',
+      description: "Tehri Lake is a vast, emerald-blue artificial reservoir located in the Tehri Garhwal district of Uttarakhand.",
+      distance: '0 km (Overlooking)',
+      image: images.lake.tehriLake
+    },
     {
       title: 'Dobra Chanti Bridge',
       description: "A modern engineering marvel that showcases the grandeur and beauty of Uttarakhand's suspension link.",
@@ -150,15 +157,15 @@ export const About: React.FC = () => {
       {/* 1. Page Hero Banner */}
       <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
         <div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-no-repeat bg-cover bg-[80%_center] lg:bg-[length:120%] lg:bg-[68%_70%]"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)), url(${images.hero.subpageBg})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.35)), url(${aboutHero})`,
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">ABOUT</span>
-          <h1 className="hero-heading !text-white !text-3xl md:!text-5xl">
-            Tehri lakeview sunrise cottages
+          <span className="section-label !text-luxury-gold mb-2">ABOUT</span>
+          <h1 className="hero-heading !text-white !text-[5.2vw] sm:!text-[28px] md:!text-[36px] lg:!text-[68px] whitespace-nowrap">
+            Tehri Lakeview Sunrise Cottages
           </h1>
         </div>
       </section>
@@ -387,9 +394,6 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
                     <p className="body-text !text-sm mb-4">
                       {attraction.description}
                     </p>
-                    <span className="section-label !text-[11px]">
-                      Distance from Resort: {attraction.distance}
-                    </span>
                   </motion.div>
                 )}
               </div>

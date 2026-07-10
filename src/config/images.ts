@@ -22,6 +22,7 @@ import dobraChantiBridge from '../assets/images/lake/dobra_chanti_bridge.jpg';
 import tehriDamViewpoint from '../assets/images/lake/tehri_dam_viewpoint.jpg';
 import kodiaJungle from '../assets/images/lake/kodia_jungle.jpg';
 import surkandaDevi from '../assets/images/lake/surkanda_devi.png';
+import tehriLake from '../assets/images/lake/tehri_lake.png';
 import familyView from '../assets/images/family/family_view.jpg';
 
 import gallery1 from '../assets/images/gallery/gallery_1.png';
@@ -73,6 +74,7 @@ export const images = {
     viewpoint: tehriDamViewpoint,
     jungle: kodiaJungle,
     surkandaDevi: surkandaDevi,
+    tehriLake: tehriLake,
   },
   family: {
     group: familyView,

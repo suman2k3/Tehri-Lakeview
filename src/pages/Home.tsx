@@ -180,6 +180,12 @@ export const Home: React.FC = () => {
 
   const attractions = [
     {
+      title: 'Tehri Lake',
+      description: "Tehri Lake is a vast, emerald-blue artificial reservoir located in the Tehri Garhwal district of Uttarakhand.",
+      distance: '0 km (Overlooking)',
+      image: images.lake.tehriLake
+    },
+    {
       title: 'Dobra Chanti Bridge',
       description: "A modern engineering marvel that showcases the grandeur and beauty of Uttarakhand's suspension link.",
       distance: '12 km',
@@ -196,6 +202,12 @@ export const Home: React.FC = () => {
       description: 'A lush pine forest reserve boasting winding nature trails, wildlife sightings, and tranquil sunrise photography spots.',
       distance: '18 km',
       image: images.lake.jungle
+    },
+    {
+      title: 'Surkanda Devi Mandir',
+      description: 'Surkanda Devi Mandir is a highly revered Hindu temple and one of the 51 sacred Shakti Peethas.',
+      distance: '26 km',
+      image: images.lake.surkandaDevi
     }
   ];
   // Auto-play timer for Rooms slider
@@ -255,7 +267,7 @@ export const Home: React.FC = () => {
   return (
     <div className="overflow-hidden bg-luxury-cream text-luxury-slate">
       {/* 1. Hero Banner */}
-      <section className="relative h-[calc(100vh-5rem)] flex items-center justify-center text-center overflow-hidden bg-luxury-charcoal">
+      <section className="relative h-[calc(100vh-5rem)] flex items-start justify-center text-center overflow-hidden bg-luxury-charcoal pt-8 md:pt-12">
         <div
           className="absolute inset-0 z-0 bg-cover bg-center"
           style={{
@@ -264,21 +276,21 @@ export const Home: React.FC = () => {
           }}
         />
 
-        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white mt-12 drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="hero-heading !text-white mb-4"
+            className="hero-heading !text-white !text-[5.2vw] sm:!text-[28px] md:!text-[36px] lg:!text-[68px] whitespace-nowrap mb-4"
           >
-            Welcome To Tehri Lakeview Sunrise Cottages
+           Tehri Lakeview Sunrise Cottages
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="sub-heading !text-gray-200 max-w-2xl mx-auto mb-6"
+            className="sub-heading !text-gray-200 !text-sm sm:!text-base md:!text-lg lg:!text-[22px] max-w-2xl mx-auto mb-6"
           >
             Peaceful Stay Near Tehri Lake
           </motion.p>
@@ -621,9 +633,6 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
                 <p className="body-text !text-sm mb-4">
                   {attraction.description}
                 </p>
-                <span className="section-label !text-[11px]">
-                  Distance from Cottages: {attraction.distance}
-                </span>
               </div>
             </div>
           ))}
