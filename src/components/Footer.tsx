@@ -107,7 +107,7 @@ export const Footer: React.FC = () => {
               <li className="flex items-center pt-2">
                 <div className="flex items-center space-x-4 pl-[26px]">
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/profile.php?id=61589532052596"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-luxury-gold transition-colors duration-300"

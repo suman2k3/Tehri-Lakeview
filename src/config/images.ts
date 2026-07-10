@@ -5,6 +5,7 @@ import heroBg from '../assets/images/hero/hero_bg.jpg';
 import subpageHero from '../assets/images/hero/subpage_hero.png';
 import aboutBg from '../assets/images/hero/about_bg.jpg';
 import contactBg from '../assets/images/hero/contact_bg.png';
+import legalBg from '../assets/images/legal_hero.png';
 import cottageInt from '../assets/images/cottages/cottage_interior.jpg';
 import cottageExt from '../assets/images/cottages/cottage_exterior.png';
 import cottageExtNight from '../assets/images/cottages/cottage_exterior_night.png';
@@ -40,6 +41,7 @@ export const images = {
     subpageBg: subpageHero,
     about: aboutBg,
     contact: contactBg,
+    legal: legalBg,
   },
   rooms: {
     deluxe: roomDeluxe,

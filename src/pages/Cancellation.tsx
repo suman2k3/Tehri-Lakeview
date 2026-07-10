@@ -26,7 +26,7 @@ export const Cancellation: React.FC = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(${images.hero.subpageBg})`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url(${images.hero.legal})`,
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

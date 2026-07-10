@@ -33,10 +33,10 @@ export const Navbar: React.FC = () => {
               className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
             <div className="flex flex-col">
-              <span className="font-serif text-lg md:text-xl font-medium tracking-widest leading-none text-luxury-charcoal">
+              <span className="font-serif text-[16px] md:text-[18px] font-medium tracking-widest leading-none text-luxury-charcoal uppercase">
                 TEHRI LAKEVIEW
               </span>
-              <span className="font-sans text-[13px] md:text-[15px] uppercase tracking-[0.06em] mt-1 text-[#72A07C] font-semibold">
+              <span className="font-sans text-[15px] md:text-[17px] uppercase tracking-normal mt-1 text-[#5B7045] font-semibold">
                 SUNRISE COTTAGES
               </span>
             </div>
