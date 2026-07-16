@@ -94,7 +94,7 @@ export const Contact: React.FC = () => {
             <img
               src={images.cottages.exteriorNight}
               alt="Tehri Lakeview Sunrise Cottages Property"
-              className="w-full h-full object-cover origin-top scale-[1.4] hover:scale-[1.45] transition-transform duration-700"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
             />
           </motion.div>
 
@@ -209,8 +209,8 @@ export const Contact: React.FC = () => {
               <div className="w-10 h-10 rounded-full border border-luxury-gold/30 text-luxury-gold flex items-center justify-center mb-4">
                 <Phone className="w-4 h-4 stroke-[1.5]" />
               </div>
-              <a href="tel:+919883113966" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
-                977-444-666-888
+              <a href="tel:+917840050489" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
+                +91 78400 50489
               </a>
             </div>
           </div>

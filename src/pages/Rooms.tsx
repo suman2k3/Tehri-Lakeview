@@ -170,7 +170,7 @@ export const Rooms: React.FC = () => {
                 {/* Show Details CTA */}
                 <div>
                   <button 
-                    onClick={() => window.open(`https://wa.me/919883113966?text=I%20want%20to%20book%20a%20${encodeURIComponent(room.title)}%20at%20Tehri%20Lakeview`, '_blank')}
+                    onClick={() => window.open(`https://wa.me/917840050489?text=I%20want%20to%20book%20a%20${encodeURIComponent(room.title)}%20at%20Tehri%20Lakeview`, '_blank')}
                     className="btn-typography bg-luxury-gold hover:bg-luxury-charcoal text-white px-6 py-3 rounded transition-all duration-300 shadow-sm cursor-pointer"
                   >
                     Book Now

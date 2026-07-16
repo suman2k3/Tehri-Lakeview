@@ -8,7 +8,7 @@ export const FloatingCTA: React.FC = () => {
       {/* Mobile Floating Bar (sticky bottom bar) */}
       <div className="md:hidden fixed bottom-0 left-0 w-full bg-luxury-charcoal/95 backdrop-blur-md border-t border-luxury-gold/30 z-40 flex items-center justify-around py-3 px-2 shadow-2xl">
         <a
-          href="tel:+919883113966"
+          href="tel:+917840050489"
           className="flex flex-col items-center text-[10px] uppercase font-semibold tracking-wider text-gray-300 active:text-luxury-gold transition-colors duration-200"
         >
           <Phone className="w-5 h-5 mb-1 text-luxury-gold" />
@@ -16,7 +16,7 @@ export const FloatingCTA: React.FC = () => {
         </a>
         
         <a
-          href="https://wa.me/919883113966"
+          href="https://wa.me/917840050489"
           target="_blank"
           rel="noopener noreferrer"
           className="flex flex-col items-center text-[10px] uppercase font-semibold tracking-wider text-gray-300 active:text-luxury-gold transition-colors duration-200"
@@ -34,7 +34,7 @@ export const FloatingCTA: React.FC = () => {
         </Link>
 
         <a
-          href="https://wa.me/919883113966"
+          href="https://wa.me/917840050489"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center space-x-1.5 bg-luxury-gold text-luxury-charcoal text-[11px] font-bold uppercase tracking-wider px-4 py-2 rounded-full shadow-md"
@@ -52,7 +52,7 @@ export const FloatingCTA: React.FC = () => {
             Call Us
           </span>
           <a
-            href="tel:+919883113966"
+            href="tel:+917840050489"
             className="bg-luxury-charcoal border border-luxury-gold/30 hover:border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-charcoal p-3.5 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
             aria-label="Call Now"
           >
@@ -66,7 +66,7 @@ export const FloatingCTA: React.FC = () => {
             WhatsApp
           </span>
           <a
-            href="https://wa.me/919883113966"
+            href="https://wa.me/917840050489"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-luxury-charcoal border border-[#25D366]/30 hover:border-[#25D366] text-[#25D366] hover:bg-[#25D366] hover:text-white p-3.5 rounded-full shadow-lg transition-all duration-300 hover:scale-110 flex items-center justify-center"
@@ -96,7 +96,7 @@ export const FloatingCTA: React.FC = () => {
             Instantly Secure Stay
           </span>
           <a
-            href="https://wa.me/919883113966"
+            href="https://wa.me/917840050489"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-luxury-gold text-luxury-charcoal p-3.5 rounded-full shadow-xl transition-all duration-300 hover:scale-115 flex items-center justify-center hover:bg-luxury-gold/90 border border-luxury-gold/50"

@@ -281,7 +281,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="hero-heading !text-white !text-[5.2vw] sm:!text-[28px] md:!text-[36px] lg:!text-[68px] whitespace-nowrap mb-4"
+            className="hero-heading !text-white !text-3xl sm:!text-[36px] md:!text-[48px] lg:!text-[68px] lg:whitespace-nowrap mb-4"
           >
            Tehri Lakeview Sunrise Cottages
           </motion.h1>

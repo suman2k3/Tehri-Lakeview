@@ -81,10 +81,10 @@ export const Cancellation: React.FC = () => {
             If you need to change your reservation or inquire about refunds, please contact our support desk directly.
           </p>
           <a
-            href="tel:+919883113966"
+            href="tel:+917840050489"
             className="inline-block btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
           >
-            Contact Desk: +919883113966
+            Contact Desk: +91 78400 50489
           </a>
         </div>
       </section>

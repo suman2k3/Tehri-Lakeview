@@ -113,10 +113,10 @@ export const Terms: React.FC = () => {
             For any custom queries, group booking policies, or clarifications, please reach out to our reservations desk.
           </p>
           <a
-            href="tel:+919883113966"
+            href="tel:+917840050489"
             className="inline-block btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
           >
-            Call Desk: +919883113966
+            Call Desk: +91 78400 50489
           </a>
         </div>
       </section>

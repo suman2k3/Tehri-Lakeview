@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
           </Link>
  
           {/* Desktop Navigation Links */}
-          <div className="hidden md:flex space-x-6 lg:space-x-8 items-center">
+          <div className="hidden lg:flex space-x-6 lg:space-x-8 items-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -60,16 +60,16 @@ export const Navbar: React.FC = () => {
           </div>
  
           {/* Phone and Book Now Button */}
-          <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <div className="hidden lg:flex items-center space-x-4 lg:space-x-6">
             <a
-              href="tel:+919883113966"
+              href="tel:+917840050489"
               className="flex items-center navbar-typography text-gray-700 hover:text-luxury-gold transition-colors duration-300"
             >
               <Phone className="w-3.5 h-3.5 mr-1.5 text-luxury-gold" />
-              +919883113966
+              +91 78400 50489
             </a>
             <a
-              href="https://wa.me/919883113966"
+              href="https://wa.me/917840050489"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-5 py-3 rounded transition-colors duration-300 shadow-md"
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
           </div>
  
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md focus:outline-none text-luxury-charcoal"
@@ -93,7 +93,7 @@ export const Navbar: React.FC = () => {
  
       {/* Mobile Menu */}
       <div
-        className={`md:hidden fixed top-[73px] left-0 w-full h-screen bg-white border-t border-luxury-gold/15 transition-all duration-300 ease-in-out ${
+        className={`lg:hidden fixed top-[73px] left-0 w-full max-h-[calc(100vh-73px)] overflow-y-auto bg-white border-t border-luxury-gold/15 transition-all duration-300 ease-in-out ${
           isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
         }`}
       >
@@ -114,14 +114,14 @@ export const Navbar: React.FC = () => {
           ))}
           <div className="w-full pt-8 flex flex-col space-y-4 items-center">
             <a
-              href="tel:+919883113966"
+              href="tel:+917840050489"
               className="w-2/3 flex items-center justify-center navbar-typography uppercase text-gray-700 border border-luxury-gold/40 rounded py-3 hover:bg-luxury-gold/5 transition-colors duration-300"
             >
               <Phone className="w-4 h-4 mr-2 text-luxury-gold" />
-              +919883113966
+              +91 78400 50489
             </a>
             <a
-              href="https://wa.me/919883113966"
+              href="https://wa.me/917840050489"
               target="_blank"
               rel="noopener noreferrer"
               className="w-2/3 flex items-center justify-center btn-typography bg-luxury-bronze text-white rounded py-3 shadow-md hover:bg-luxury-bronze-dark transition-colors duration-300"

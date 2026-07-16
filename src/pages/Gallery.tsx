@@ -4,10 +4,21 @@ import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { images } from '../config/images';
 import galleryHero from '../assets/images/gallery_hero.png';
 
+// Import newly requested video and image assets
+import img1 from '../assets/videos/img1.jpeg';
+import img2 from '../assets/videos/img2.jpeg';
+import img3 from '../assets/videos/img3.jpeg';
+import vid1 from '../assets/videos/vid1.mp4';
+import vid2 from '../assets/videos/vid2.mp4';
+import vid3 from '../assets/videos/vid3.mp4';
+import vid4 from '../assets/videos/vid4.mp4';
+import vid5 from '../assets/videos/vid5.mp4';
+
 interface GalleryItem {
   src: string;
   category: string;
   caption: string;
+  type?: 'image' | 'video';
 }
 
 export const Gallery: React.FC = () => {
@@ -16,28 +27,26 @@ export const Gallery: React.FC = () => {
   const managementPhotos: GalleryItem[] = [
     { src: images.rooms.deluxe, category: 'Management', caption: 'Lakeside Deluxe Bedroom' },
     { src: images.rooms.premium, category: 'Management', caption: 'Premium Ridgeview Suite' },
-    { src: images.rooms.suite, category: 'Management', caption: 'Luxury A-Frame Loft Bedroom' },
-    { src: images.cottages.exterior, category: 'Management', caption: 'Alpine Chalet Exterior' },
-    { src: images.food.diningBg, category: 'Management', caption: 'Bhagirathi Bistro Dining Deck' },
+    { src: images.rooms.suite, category: 'Management', caption: 'Luxury A-Frame Loft Bedroom' }, 
     { src: images.food.menu1, category: 'Management', caption: 'Resort Signature Culinary Delights' },
-    { src: images.food.menu2, category: 'Management', caption: 'Traditional Garhwali Thali Feast' },
-    { src: images.gallery[0].src, category: 'Management', caption: 'Cottages Sunrise Panorama' },
-    { src: images.gallery[1].src, category: 'Management', caption: 'Splendid Twilight View of the Resort' }
+    { src: img1, category: 'Guest', caption: 'Morning Tea on the Terrace' },
+    { src: img2, category: 'Guest', caption: 'Cottages Hillside Walkway' },
+    { src: img3, category: 'Guest', caption: 'Lake View from Cottage Window' }
   ];
 
   const guestPhotos: GalleryItem[] = [
-    { src: images.lake.sunrise, category: 'Guest', caption: 'Tehri Lake Aqua Blue Water View' },
-    { src: images.activities.boating, category: 'Guest', caption: 'Boating Excursion on the Lake' },
-    { src: images.activities.adventure, category: 'Guest', caption: 'Thrill Seekers Speed Boating' },
-    { src: images.family.group, category: 'Guest', caption: 'Lakeside Evening Bonfire & Camping' },
-    { src: images.gallery[2].src, category: 'Guest', caption: 'Stunning Morning Sun rays at the Deck' },
-    { src: images.gallery[3].src, category: 'Guest', caption: 'Himalayan Peaks from the Balcony' },
-    { src: images.rooms.deluxe, category: 'Guest', caption: 'Cosy Warm Bedding and Interiors' },
-    { src: images.rooms.suite, category: 'Guest', caption: 'Wooden Loft Lounge Area' },
-    { src: images.food.diningBg, category: 'Guest', caption: 'Alfresco Dinner under the Stars' }
+    
   ];
 
-  const allPhotos = [...managementPhotos, ...guestPhotos];
+  const videoReels: GalleryItem[] = [
+    { src: vid1, category: 'Videos', caption: 'Lakeside Sunrise View', type: 'video' },
+    { src: vid2, category: 'Videos', caption: 'Water Sports Adventure', type: 'video' },
+    { src: vid3, category: 'Videos', caption: 'Speed Boating Experience', type: 'video' },
+    { src: vid4, category: 'Videos', caption: 'Resort Bonfire Evening', type: 'video' },
+    { src: vid5, category: 'Videos', caption: 'Cottages Ridge Walk', type: 'video' }
+  ];
+
+  const allPhotos = [...managementPhotos, ...guestPhotos, ...videoReels];
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -140,6 +149,56 @@ export const Gallery: React.FC = () => {
         </div>
       </section>
 
+      {/* Video Reels Section */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-16">
+        <h2 className="section-heading text-center mb-4">
+          Resort Video Reels &amp; Experiences
+        </h2>
+        <div className="flex justify-center mb-12">
+          <div className="w-16 h-[1px] bg-luxury-gold/50" />
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {videoReels.map((item, index) => {
+            const actualIndex = index + managementPhotos.length + guestPhotos.length;
+            return (
+              <motion.div
+                key={`video-${index}`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
+                className="overflow-hidden rounded shadow-sm border border-luxury-gold/5 group cursor-pointer relative aspect-[4/3] bg-gray-100"
+                onClick={() => openLightbox(actualIndex)}
+              >
+                <video
+                  src={item.src}
+                  muted
+                  loop
+                  playsInline
+                  autoPlay
+                  className="w-full h-full object-cover"
+                />
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 bg-black/35 opacity-40 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="bg-white/95 p-3 rounded-full text-luxury-charcoal shadow-lg hover:scale-110 transition-transform duration-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5 pl-0.5"
+                    >
+                      <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+      </section>
+
       {/* Lightbox Modal */}
       <AnimatePresence>
         {lightboxIndex !== null && (
@@ -175,24 +234,36 @@ export const Gallery: React.FC = () => {
               <ChevronRight className="w-6 h-6" />
             </button>
 
-            {/* Image display */}
+            {/* Content display */}
             <div className="max-w-4xl w-full flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
-              <motion.img
-                key={lightboxIndex}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3 }}
-                src={allPhotos[lightboxIndex].src}
-                alt={allPhotos[lightboxIndex].caption}
-                className="max-h-[70vh] max-w-full object-contain rounded border border-white/10 shadow-2xl"
-              />
+              {allPhotos[lightboxIndex].type === 'video' ? (
+                <video
+                  key={lightboxIndex}
+                  src={allPhotos[lightboxIndex].src}
+                  controls
+                  autoPlay
+                  playsInline
+                  loop
+                  className="max-h-[70vh] max-w-full object-contain rounded border border-white/10 shadow-2xl"
+                />
+              ) : (
+                <motion.img
+                  key={lightboxIndex}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.3 }}
+                  src={allPhotos[lightboxIndex].src}
+                  alt={allPhotos[lightboxIndex].caption}
+                  className="max-h-[70vh] max-w-full object-contain rounded border border-white/10 shadow-2xl"
+                />
+              )}
               {/* Caption Overlay */}
               <div className="text-center mt-6 text-white px-4">
                 <p className="font-serif text-lg sm:text-xl font-light text-gray-200">
                   {allPhotos[lightboxIndex].caption}
                 </p>
                 <span className="font-sans text-xs text-luxury-gold uppercase tracking-widest block mt-2 font-medium">
-                  Image {lightboxIndex + 1} of {allPhotos.length} • {allPhotos[lightboxIndex].category}
+                  Item {lightboxIndex + 1} of {allPhotos.length} • {allPhotos[lightboxIndex].category}
                 </span>
               </div>
             </div>

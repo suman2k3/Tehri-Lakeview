@@ -155,7 +155,7 @@ export const About: React.FC = () => {
   return (
     <div className="bg-luxury-cream overflow-hidden">
       {/* 1. Page Hero Banner */}
-      <section className="relative h-[45vh] flex items-center justify-center text-center overflow-hidden">
+      <section className="relative h-[45vh] flex items-start justify-center pt-8 md:pt-10 text-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -165,7 +165,7 @@ export const About: React.FC = () => {
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
           <span className="section-label !text-luxury-gold mb-2">ABOUT</span>
-          <h1 className="hero-heading !text-white !text-[5.2vw] sm:!text-[28px] md:!text-[36px] lg:!text-[68px] whitespace-nowrap">
+          <h1 className="hero-heading !text-white !text-3xl sm:!text-[36px] md:!text-[48px] lg:!text-[68px] lg:whitespace-nowrap">
             Tehri Lakeview Sunrise Cottages
           </h1>
         </div>
