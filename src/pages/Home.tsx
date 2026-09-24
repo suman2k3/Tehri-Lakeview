@@ -422,6 +422,8 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
                 <img
                   src={images.rooms.deluxe}
                   alt="Fully Furnished"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
@@ -444,6 +446,8 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
                 <img
                   src={images.rooms.suiteHome}
                   alt="High-Speed Wi-Fi"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-left-top group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
@@ -466,6 +470,8 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
                 <img
                   src={images.rooms.premium}
                   alt="Comfortable Stay"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
               </div>

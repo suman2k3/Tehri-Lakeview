@@ -1,16 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
-import { Home } from './pages/Home';
-import { About } from './pages/About';
-import { Rooms } from './pages/Rooms';
-import { Dining } from './pages/Dining';
-import { Gallery } from './pages/Gallery';
-import { Contact } from './pages/Contact';
-import { Terms } from './pages/Terms';
-import { Cancellation } from './pages/Cancellation';
-import { Privacy } from './pages/Privacy';
+
+// Route-based code splitting for fast initial page load
+const Home = lazy(() => import('./pages/Home').then(m => ({ default: m.Home })));
+const About = lazy(() => import('./pages/About').then(m => ({ default: m.About })));
+const Rooms = lazy(() => import('./pages/Rooms').then(m => ({ default: m.Rooms })));
+const Dining = lazy(() => import('./pages/Dining').then(m => ({ default: m.Dining })));
+const Gallery = lazy(() => import('./pages/Gallery').then(m => ({ default: m.Gallery })));
+const Contact = lazy(() => import('./pages/Contact').then(m => ({ default: m.Contact })));
+const Terms = lazy(() => import('./pages/Terms').then(m => ({ default: m.Terms })));
+const Cancellation = lazy(() => import('./pages/Cancellation').then(m => ({ default: m.Cancellation })));
+const Privacy = lazy(() => import('./pages/Privacy').then(m => ({ default: m.Privacy })));
 
 // ScrollToTop helper component to reset scroll position on route changes
 const ScrollToTop: React.FC = () => {
@@ -23,6 +25,13 @@ const ScrollToTop: React.FC = () => {
   return null;
 };
 
+// Subtle fallback loader during route transitions
+const PageLoader: React.FC = () => (
+  <div className="min-h-[60vh] flex items-center justify-center bg-luxury-cream">
+    <div className="w-8 h-8 border-2 border-luxury-gold border-t-transparent rounded-full animate-spin" />
+  </div>
+);
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -31,19 +40,21 @@ const App: React.FC = () => {
         {/* Navigation Bar */}
         <Navbar />
 
-        {/* Page Content */}
+        {/* Page Content with Lazy Loading */}
         <main className="flex-grow pt-20">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/rooms" element={<Rooms />} />
-            <Route path="/dining" element={<Dining />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/cancellation" element={<Cancellation />} />
-            <Route path="/privacy" element={<Privacy />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/rooms" element={<Rooms />} />
+              <Route path="/dining" element={<Dining />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/cancellation" element={<Cancellation />} />
+              <Route path="/privacy" element={<Privacy />} />
+            </Routes>
+          </Suspense>
         </main>
 
         {/* Global Footer */}

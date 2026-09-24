@@ -114,6 +114,8 @@ export const Gallery: React.FC = () => {
               <img
                 src={item.src}
                 alt={item.caption}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
               />
               {/* Hover Overlay */}
@@ -145,6 +147,8 @@ export const Gallery: React.FC = () => {
                 <img
                   src={item.src}
                   alt={item.caption}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
                 {/* Hover Overlay */}
@@ -185,7 +189,7 @@ export const Gallery: React.FC = () => {
                   muted
                   loop
                   playsInline
-                  autoPlay
+                  preload="metadata"
                   className="w-full h-full object-cover"
                 />
                 {/* Play Button Overlay */}
