@@ -189,6 +189,7 @@ export const Gallery: React.FC = () => {
                   muted
                   loop
                   playsInline
+                  webkit-playsinline="true"
                   preload="metadata"
                   className="w-full h-full object-cover"
                 />
@@ -257,6 +258,7 @@ export const Gallery: React.FC = () => {
                   controls
                   autoPlay
                   playsInline
+                  webkit-playsinline="true"
                   loop
                   className="max-h-[70vh] max-w-full object-contain rounded border border-white/10 shadow-2xl"
                 />

@@ -37,6 +37,10 @@
 @layer base {
   html, body {
     @apply max-w-[100vw] overflow-x-hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-overflow-scrolling: touch;
   }
 
   body {
@@ -46,6 +50,12 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif text-luxury-charcoal tracking-wide;
   }
+}
+
+/* Safari WebKit Backdrop Filter Fallback */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 }
 
 /* Custom Scrollbar */

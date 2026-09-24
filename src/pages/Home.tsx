@@ -384,6 +384,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               controls
               preload="metadata"
               playsInline
+              webkit-playsinline="true"
               className="w-full h-96 object-cover"
             >
               <source src={homeVideo} type="video/mp4" />
