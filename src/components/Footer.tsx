@@ -4,7 +4,7 @@ import { MapPin, Phone, Mail } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#1C1D21] text-gray-300 font-sans border-t border-luxury-gold/15">
+    <footer className="bg-[#1F3443] text-gray-300 font-sans border-t border-luxury-gold/15">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Us */}
@@ -13,7 +13,7 @@ export const Footer: React.FC = () => {
               About Us
             </h3>
             <p className="footer-typography leading-relaxed font-light !text-gray-400">
-              Tehri Lakeview Sunrise Cottages is a private boutique retreat along the Bhagirathi Zakhli Road in New Tehri. We pair luxury A-frame wooden cottages with warm hospitality, lakeside views, and unique water adventures to provide our guests a quiet, unforgettable escape.
+              Tehri Lakeview Sunrise Cottages is a private boutique retreat along the Bhagirathi Zakhli Road in New Tehri. We pair luxury wooden cottages with warm hospitality, lakeside views, and unique water adventures to provide our guests a quiet, unforgettable escape.
             </p>
           </div>
 
@@ -92,11 +92,16 @@ export const Footer: React.FC = () => {
                   Kutta Zakh Road, Tehri, Uttarakhand 249001
                 </span>
               </li>
-              <li className="flex items-center">
-                <Phone className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0" />
-                <a href="tel:+917840050489" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
-                  +91 78400 50489
-                </a>
+              <li className="flex items-start">
+                <Phone className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0 mt-1" />
+                <div className="flex flex-col space-y-1">
+                  <a href="tel:+917840050489" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                    +91 78400 50489
+                  </a>
+                  <a href="tel:+919899950373" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                    +91 98999 50373
+                  </a>
+                </div>
               </li>
               <li className="flex items-center">
                 <Mail className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0" />

@@ -31,7 +31,7 @@ export const Terms: React.FC = () => {
       items: [
         {
           heading: 'Strict Fire Hazard Rules (No Smoking)',
-          content: 'Due to the organic, premium A-frame wooden structures of our lakeside cottages, smoking is strictly prohibited inside the cottages, lofts, or balconies. Smoking is only permitted in designated open-air resort spaces. Violators will face immediate penalty charges of INR 10,000 for cleaning and safety violations.'
+          content: 'Due to the organic, premium wooden structures of our lakeside cottages, smoking is strictly prohibited inside the cottages, lofts, or balconies. Smoking is only permitted in designated open-air resort spaces. Violators will face immediate penalty charges of INR 10,000 for cleaning and safety violations.'
         },
         {
           heading: 'Respecting Nature & Quiet Hours',
@@ -56,17 +56,17 @@ export const Terms: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
+          <span className="section-label font-serif !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
           <h1 className="hero-heading !text-white">
             Terms &amp; Conditions
           </h1>
-        </div>
+        </div> 
       </section>
 
       {/* 2. Content Sections */}
       <section className="luxury-section-padding px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="section-heading mb-4">Terms &amp; Conditions</h2>
+         <h2 className="section-heading mb-4"> </h2>
           <p className="sub-heading !text-gray-500 max-w-2xl mx-auto">
             Please review our booking policies and house rules before scheduling your visit to Tehri Lakeview SUNRISE COTTAGES.
           </p>
@@ -112,12 +112,20 @@ export const Terms: React.FC = () => {
           <p className="body-text mb-4">
             For any custom queries, group booking policies, or clarifications, please reach out to our reservations desk.
           </p>
-          <a
-            href="tel:+917840050489"
-            className="inline-block btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
-          >
-            Call Desk: +91 78400 50489
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="tel:+917840050489"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              +91 78400 50489
+            </a>
+            <a
+              href="tel:+919899950373"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              +91 98999 50373
+            </a>
+          </div>
         </div>
       </section>
     </div>

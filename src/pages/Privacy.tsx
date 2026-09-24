@@ -30,7 +30,7 @@ export const Privacy: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
+          <span className="section-label font-serif !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
           <h1 className="hero-heading !text-white">
             Privacy Policy
           </h1>
@@ -40,7 +40,7 @@ export const Privacy: React.FC = () => {
       {/* 2. Content Section */}
       <section className="luxury-section-padding px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="section-heading mb-4">Privacy &amp; Data Policy</h2>
+          <h2 className="section-heading mb-4"></h2>
           <p className="sub-heading !text-gray-500 max-w-2xl mx-auto">
             Review how we collect, store, and protect your personal credentials.
           </p>

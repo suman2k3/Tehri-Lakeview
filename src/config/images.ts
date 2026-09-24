@@ -2,6 +2,9 @@
 import logoImg from '../assets/images/logo/logo.png';
 import dividerImg from '../assets/images/divider.png';
 import heroBg from '../assets/images/hero/hero_bg.jpg';
+import heroBg2 from '../assets/images/hero/hero_bg_2.jpg';
+import heroBg3 from '../assets/images/hero/hero_bg_3.png';
+import heroBg3Mobile from '../assets/images/hero/hero_bg_3_mobile.jpg';
 import subpageHero from '../assets/images/hero/subpage_hero.png';
 import aboutBg from '../assets/images/hero/about_bg.jpg';
 import contactBg from '../assets/images/hero/contact_bg.png';
@@ -14,7 +17,13 @@ import roomDeluxe from '../assets/images/rooms/room_deluxe.jpg';
 import roomEconomy from '../assets/images/rooms/room_economy.jpg';
 import suiteHome from '../assets/images/rooms/suite_home.jpg';
 import menuPdf from '../assets/Explore menu.pdf';
+import beverageMenu from '../assets/images/food/beverage_menu.jpg';
+import himalayanCurry from '../assets/images/food/himalayan_curry.jpg';
 import diningBg from '../assets/images/food/dining_bg.jpg';
+import diningBuffet from '../assets/images/food/dining_buffet.jpg';
+import diningHall from '../assets/images/food/dining_hall.jpg';
+import diningView from '../assets/images/food/dining_view.jpg';
+import freshTasteTerrace from '../assets/images/food/fresh_taste_terrace.jpg';
 import menu1 from '../assets/images/food/menu_1.jpg';
 import menu2 from '../assets/images/food/menu_2.jpg';
 import boating from '../assets/images/activities/boating.png';
@@ -38,6 +47,9 @@ export const images = {
   },
   hero: {
     bg: heroBg,
+    bg2: heroBg2,
+    bg3: heroBg3,
+    bg3Mobile: heroBg3Mobile,
     subpageBg: subpageHero,
     about: aboutBg,
     contact: contactBg,
@@ -57,12 +69,18 @@ export const images = {
   },
   gallery: [
     { src: gallery1, category: 'exterior', caption: 'Scenic Sunrise over the Cottages' },
-    { src: gallery2, category: 'interior', caption: 'Cozy A-frame Cottage Loft view' },
+    { src: gallery2, category: 'interior', caption: 'Cozy Wooden Cottage Loft view' },
     { src: gallery3, category: 'rooms', caption: 'Premium Lakeview Room Interior' },
     { src: gallery4, category: 'rooms', caption: 'Luxury Suite Bedroom Setting' },
   ],
   food: {
     diningBg: diningBg,
+    buffet: diningBuffet,
+    freshTaste1: diningHall,
+    freshTaste2: freshTasteTerrace,
+    freshTaste3: diningView,
+    himalayanTaste1: beverageMenu,
+    himalayanTaste2: himalayanCurry,
     menu1: menu1,
     menu2: menu2,
     menuPdf: menuPdf,

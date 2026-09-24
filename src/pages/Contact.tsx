@@ -36,11 +36,6 @@ export const Contact: React.FC = () => {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Please provide a valid email';
     }
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required';
-    } else if (!/^[0-9+\s-]{10,15}$/.test(formData.phone.trim())) {
-      newErrors.phone = 'Please provide a valid phone number';
-    }
     if (!formData.message.trim()) newErrors.message = 'Message content is required';
 
     setErrors(newErrors);
@@ -52,14 +47,18 @@ export const Contact: React.FC = () => {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API call
+    
+    const text = `Hello Tehri Lakeview Sunrise Cottages,\n\nI would like to make an inquiry:\n- *Name:* ${formData.name.trim()}\n- *Email:* ${formData.email.trim()}\n- *Message:* ${formData.message.trim()}`;
+    const whatsappUrl = `https://wa.me/917840050489?text=${encodeURIComponent(text)}`;
+
+    window.open(whatsappUrl, '_blank');
+
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-      // Clear success after 5s
       setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    }, 500);
   };
 
   return (
@@ -73,7 +72,7 @@ export const Contact: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
+          <span className="section-label !text-luxury-gold mb-3">CONTACT US</span>
           <h1 className="hero-heading !text-white">
             Get In Touch
           </h1>
@@ -170,7 +169,7 @@ export const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="btn-typography w-full bg-[#B07D4C] hover:bg-luxury-charcoal text-white py-3 transition-all duration-300 disabled:bg-gray-400 cursor-pointer"
+                  className="btn-typography w-full bg-[#284B63] hover:bg-[#1F3443] text-white py-3 transition-all duration-300 disabled:bg-gray-400 cursor-pointer shadow-md"
                 >
                   {isSubmitting ? 'Sending...' : 'Send'}
                 </button>
@@ -209,9 +208,14 @@ export const Contact: React.FC = () => {
               <div className="w-10 h-10 rounded-full border border-luxury-gold/30 text-luxury-gold flex items-center justify-center mb-4">
                 <Phone className="w-4 h-4 stroke-[1.5]" />
               </div>
-              <a href="tel:+917840050489" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
-                +91 78400 50489
-              </a>
+              <div className="flex flex-col space-y-1">
+                <a href="tel:+917840050489" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
+                  +91 78400 50489
+                </a>
+                <a href="tel:+919899950373" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
+                  +91 98999 50373
+                </a>
+              </div>
             </div>
           </div>
         </div>

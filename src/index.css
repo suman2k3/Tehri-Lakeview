@@ -1,22 +1,44 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
 @theme {
-  --color-luxury-gold: #C5A880;
-  --color-luxury-cream: #a2cffe;
-  --color-luxury-charcoal: #1E2229;
-  --color-luxury-slate: #2D3139;
-  --color-luxury-bronze: #B07D4C;
-  --color-luxury-bronze-dark: #926036;
+  --color-luxury-gold: #C49A62;
+  --color-luxury-cream: #EAF4FC;
+  --color-luxury-mist: #D4E8F7;
+  --color-luxury-navy: #284B63;
+  --color-luxury-charcoal: #243746;
+  --color-luxury-slate: #243746;
+  --color-luxury-bronze: #284B63;
+  --color-luxury-bronze-dark: #1F3443;
+  --color-luxury-footer: #1F3443;
   
   --font-serif: "Playfair Display", "Cinzel", serif;
-  --font-sans: "Inter", "Montserrat", sans-serif;
+  --font-sans: "Lato", "Inter", "Montserrat", sans-serif;
+  --font-bodoni: "Bodoni Moda", serif;
+  --font-cormorant: "Cormorant Garamond", serif;
+  --font-lato: "Lato", sans-serif;
   
   --spacing-128: 32rem;
 }
 
+.font-lato {
+  font-family: "Lato", sans-serif;
+}
+
+.font-bodoni {
+  font-family: "Bodoni Moda", serif;
+}
+
+.font-cormorant {
+  font-family: "Cormorant Garamond", serif;
+}
+
 @layer base {
+  html, body {
+    @apply max-w-[100vw] overflow-x-hidden;
+  }
+
   body {
     @apply font-sans bg-luxury-cream text-luxury-slate antialiased scroll-smooth;
   }
@@ -121,11 +143,22 @@
 }
 
 .body-text {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   font-weight: 400 !important;
-  font-size: 18px !important;
-  line-height: 2 !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  letter-spacing: normal !important;
   color: #4E5968 !important;
+}
+@media (min-width: 768px) {
+  .body-text {
+    font-size: 17px !important;
+  }
+}
+@media (min-width: 1024px) {
+  .body-text {
+    font-size: 18px !important;
+  }
 }
 
 .btn-typography {
@@ -144,9 +177,9 @@
 }
 
 .footer-typography {
-  font-family: "Inter", sans-serif !important;
+  font-family: "Lato", sans-serif !important;
   font-weight: 400 !important;
-  font-size: 16px !important;
+  font-size: 15px !important;
   color: #9CA3AF !important;
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../config/images';
-import heroVideo from '../assets/videos/hero_video.mp4';
+import homeVideo from '../assets/videos/home video.mp4';
 
 // Custom Gold Loop Divider component to match the screenshot decoration
 // Custom Gold Loop Divider component to match the screenshot decoration
@@ -71,6 +71,12 @@ export const Home: React.FC = () => {
   const [activeRoomIndex, setActiveRoomIndex] = useState(0);
   const [activeReviewIndex, setActiveReviewIndex] = useState(0);
   const [activeLocaleIndex, setActiveLocaleIndex] = useState(0);
+  const [heroSlide, setHeroSlide] = useState(0);
+  const [expandedReviews, setExpandedReviews] = useState<Record<number, boolean>>({});
+
+  const toggleReadMore = (id: number) => {
+    setExpandedReviews(prev => ({ ...prev, [id]: !prev[id] }));
+  };
 
   const roomsContainerRef = useRef<HTMLDivElement>(null);
   const reviewsContainerRef = useRef<HTMLDivElement>(null);
@@ -78,52 +84,40 @@ export const Home: React.FC = () => {
   const reviewsData = [
     {
       id: 1,
-      name: 'Sumana Bera',
+      name: 'Suman kumar',
       avatarLetter: 'S',
       avatarBg: 'bg-indigo-700',
-      time: '4 months ago',
+      
       rating: 5,
-      comment: 'The rooms are excellent, the property is outstanding, and the stay here has been a wonderful experience. The staff members are excellent, and the place is...',
+      comment: 'I had an amazing stay at Tehri Lakeview Sunrise Cottage. The rooms were clean, comfortable, and well-maintained. The biggest highlight was the breathtaking view of Tehri Lake, especially during sunrise—it was absolutely stunning. The peaceful atmosphere made the stay even more relaxing. The staff were friendly and welcoming, making sure everything was comfortable. I truly enjoyed my time here and would highly recommend this place to anyone looking for a scenic and peaceful getaway. Looking forward to visiting again!',
       readMore: true
     },
     {
       id: 2,
-      name: 'Silky Sircar',
-      avatarLetter: 'S',
+      name: 'Kashish Sachin',
+      avatarLetter: 'K',
       avatarBg: 'bg-green-600',
-      time: '4 months ago',
       rating: 5,
-      comment: 'good',
-      readMore: false
+      comment: 'Excellent stay at Tehri Lake View Sunrise Cottages! The rooms were clean, spacious, and comfortable with a stunning Tehri Lake view. Peaceful location, friendly staff, and beautiful sunrise. One of the best cottages in Tehri for a relaxing getaway. Highly recommended!',
+      readMore: true
     },
     {
       id: 3,
-      name: 'Mahasweta Mondal',
-      avatarLetter: 'M',
+      name: 'Richa Gupta Todi',
+      avatarLetter: 'R',
       avatarBg: 'bg-orange-600',
-      time: '4 months ago',
+      
       rating: 5,
-      comment: 'Very very satisfied with the overall service of the hotel . The most remarkable service is from Saheli and Ronita. Very happy with the entire hotel.',
-      readMore: false
+      comment: 'Best place to stay for perfect morning sunrise along with lakeview in the lap of nature.Its brand new along with wifi and even food is tasty.You will enjoy your stay here.',
+      readMore: true
     },
     {
       id: 4,
-      name: 'Priyanka Agarwalla',
-      avatarLetter: 'P',
+      name: 'aadi works',
+      avatarLetter: 'a',
       avatarBg: 'bg-teal-600',
-      time: '4 months ago',
       rating: 5,
-      comment: 'Superb service. The property and maintenance is brilliant. Best place to stay at New Tehri.',
-      readMore: false
-    },
-    {
-      id: 5,
-      name: 'Antara Ganguly',
-      avatarLetter: 'A',
-      avatarBg: 'bg-purple-600',
-      time: '4 months ago',
-      rating: 5,
-      comment: 'A nice place to dine with family. Food taste was very homely. The resort gave off proper premium cottage vibes.',
+      comment: 'Amazing sunrise view from the cottage. Perfect place to relax with family. Highly recommended.',
       readMore: false
     }
   ];
@@ -254,6 +248,18 @@ export const Home: React.FC = () => {
     return () => clearInterval(timer);
   }, [reviewsData.length]);
 
+  const desktopHeroSlides = [images.hero.bg, images.hero.bg2, images.hero.bg3];
+  const mobileHeroSlides = [images.hero.bg, images.hero.bg2, images.hero.bg3Mobile];
+
+  // Auto-play timer for Hero slider (4 seconds per slide)
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % desktopHeroSlides.length);
+    }, 4000);
+
+    return () => clearInterval(timer);
+  }, [desktopHeroSlides.length]);
+
   // Auto-play timer for Locale Attractions slider
   React.useEffect(() => {
     const timer = setInterval(() => {
@@ -266,22 +272,44 @@ export const Home: React.FC = () => {
 
   return (
     <div className="overflow-hidden bg-luxury-cream text-luxury-slate">
-      {/* 1. Hero Banner */}
+      {/* 1. Hero Banner Slider */}
       <section className="relative h-[calc(100vh-5rem)] flex items-start justify-center text-center overflow-hidden bg-luxury-charcoal pt-8 md:pt-12">
-        <div
-          className="absolute inset-0 z-0 bg-cover bg-center"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)), url(${images.hero.bg})`,
-            filter: 'brightness(1.15)',
-          }}
-        />
+        {/* Mobile View Hero Banner Slider */}
+        <div className="absolute inset-0 z-0 md:hidden">
+          <motion.div
+            key={`mobile-${heroSlide}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className={`absolute inset-0 bg-cover ${heroSlide === 2 ? 'bg-[center_18%]' : 'bg-center'}`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${mobileHeroSlides[heroSlide]})`,
+              filter: 'brightness(1.15)',
+            }}
+          />
+        </div>
+
+        {/* Laptop / Desktop View Hero Banner Slider */}
+        <div className="absolute inset-0 z-0 hidden md:block">
+          <motion.div
+            key={`desktop-${heroSlide}`}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className={`absolute inset-0 bg-cover ${heroSlide === 2 ? 'bg-[center_18%]' : 'bg-center'}`}
+            style={{
+              backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${desktopHeroSlides[heroSlide]})`,
+              filter: 'brightness(1.15)',
+            }}
+          />
+        </div>
 
         <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="hero-heading !text-white !text-3xl sm:!text-[36px] md:!text-[48px] lg:!text-[68px] lg:whitespace-nowrap mb-4"
+            className="hero-heading font-serif !text-white whitespace-nowrap !font-bold !text-[5.5vw] sm:!text-[36px] md:!text-[48px] lg:!text-[68px] mb-3"
           >
            Tehri Lakeview Sunrise Cottages
           </motion.h1>
@@ -290,10 +318,24 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="sub-heading !text-gray-200 !text-sm sm:!text-base md:!text-lg lg:!text-[22px] max-w-2xl mx-auto mb-6"
+            className="sub-heading font-cormorant !text-white !text-[3.8vw] sm:!text-xl md:!text-2xl lg:!text-[28px] tracking-wider max-w-2xl mx-auto mb-6 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
           >
             Peaceful Stay Near Tehri Lake
           </motion.p>
+        </div>
+
+        {/* Hero Slider Dots */}
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center space-x-3">
+          {desktopHeroSlides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setHeroSlide(idx)}
+              className={`h-3 rounded-full transition-all duration-300 cursor-pointer ${
+                heroSlide === idx ? 'bg-luxury-gold w-8' : 'bg-white/60 hover:bg-white w-3'
+              }`}
+              aria-label={`Hero Banner Slide ${idx + 1}`}
+            />
+          ))}
         </div>
       </section>
 
@@ -303,10 +345,10 @@ export const Home: React.FC = () => {
       <section className="luxury-section-padding relative">
         <MandalaOrnaments />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <span className="section-label mb-3">ABOUT</span>
-          <h2 className="section-heading">
-            Welcome to Tehri Lakeview Sunrise Cottages
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center relative z-10">
+          <span className="section-label mb-3 text-center">ABOUT</span>
+          <h2 className="font-serif text-luxury-charcoal text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center font-normal tracking-wide">
+            Tehri Lakeview Sunrise Cottages
           </h2>
           <GoldDivider />
 
@@ -344,7 +386,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               playsInline
               className="w-full h-96 object-cover"
             >
-              <source src={heroVideo} type="video/mp4" />
+              <source src={homeVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -352,7 +394,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 3. Accommodations Section */}
-      <section className="luxury-section-padding bg-white/40 border-t border-luxury-gold/10">
+      <section className="luxury-section-padding bg-[#D4E8F7] border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="section-label mb-3">ACCOMMODATIONS</span>
@@ -379,13 +421,13 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.deluxe}
-                  alt="Comfort Cottage"
+                  alt="Fully Furnished"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Comfort Cottage
+                  Fully Furnished
                 </h3>
               </div>
             </motion.div>
@@ -401,13 +443,13 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.suiteHome}
-                  alt="A-Frame Cottage"
+                  alt="High-Speed Wi-Fi"
                   className="w-full h-full object-cover object-left-top group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  A-Frame Cottage
+                  High-Speed Wi-Fi
                 </h3>
               </div>
             </motion.div>
@@ -423,19 +465,20 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.premium}
-                  alt="Economy Rooms"
+                  alt="Comfortable Stay"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Economy Rooms
+                  Comfortable Stay
                 </h3>
               </div>
             </motion.div>
           </div>
 
           {/* Dots Indicator */}
+
           <div className="flex justify-center space-x-2 mt-8">
             {[...Array(3)].map((_, index) => (
               <button
@@ -453,6 +496,13 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
 
       {/* 5. Dining Section */}
       <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-4xl mx-auto mb-12 flex flex-col items-center justify-center">
+          <h2 className="section-heading text-[6.5vw] sm:text-3xl md:text-4xl lg:text-5xl sm:whitespace-nowrap text-center mb-4">
+            Dining Experience
+          </h2>
+          <GoldDivider />
+        </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Text Info */}
           <motion.div
@@ -461,12 +511,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="section-heading mb-4">
-              Dining Experience
-            </h2>
-            <GoldDivider />
-            
-            <div className="space-y-6 body-text mt-8">
+            <div className="space-y-6 body-text">
               <p>
                 At Tehri LakeView Sunrise Cottages, our restaurant offers a delightful culinary experience with a variety of Indian, Chinese, and local Uttarakhand dishes. Prepared using fresh ingredients and traditional recipes, every meal is crafted to satisfy your taste and complement your stay amidst the scenic beauty of Tehri Lake.
               </p>
@@ -494,11 +539,11 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 6. Guest Reviews Section */}
-      <section className="luxury-section-padding bg-white/40 border-t border-luxury-gold/10">
+      <section className="luxury-section-padding bg-[#D4E8F7] border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <span className="section-label mb-3">GUEST REVIEWS</span>
-            <h2 className="section-heading">
+          <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
+            <span className="section-label mb-3 text-center">GUEST REVIEWS</span>
+            <h2 className="section-heading text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center">
               Guest Experiences at New Tehri
             </h2>
             <GoldDivider />
@@ -522,57 +567,68 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               onScroll={handleReviewsScroll}
               className="flex flex-row overflow-x-auto gap-6 pt-8 pb-6 snap-x snap-mandatory scrollbar-none relative w-full"
             >
-              {reviewsData.map((review) => (
-                <div
-                  key={review.id}
-                  className="bg-white rounded-lg p-6 pt-10 border border-luxury-gold/15 shadow-sm text-center relative flex flex-col justify-between w-[85%] sm:w-[45%] md:w-[calc(33.333%-16px)] flex-shrink-0 snap-start"
-                >
-                  {/* User Avatar Circle with Google G badge */}
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-white flex items-center justify-center shadow">
-                    <div className={`w-full h-full rounded-full flex items-center justify-center text-white font-bold text-lg ${review.avatarBg}`}>
-                      {review.avatarLetter}
-                    </div>
-                    {/* Google G badge */}
-                    <div className="absolute -bottom-1 -right-1 w-4.5 h-4.5 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 z-20">
-                      <svg viewBox="0 0 24 24" className="w-2.5 h-2.5">
-                        <path
-                          fill="#EA4335"
-                          d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0 7.354 0 3.373 2.682 1.39 6.573l3.876 3.192z"
-                        />
-                        <path
-                          fill="#FBBC05"
-                          d="M16.04 15.358A7.058 7.058 0 0 1 12 17.09c-3.155 0-5.836-2.09-6.845-4.945l-3.882 3.146C3.255 19.5 7.29 22 12 22c3.09 0 5.836-1.127 7.964-3.055l-3.924-3.587z"
-                        />
-                        <path
-                          fill="#4285F4"
-                          d="M23.509 12.273c0-.818-.082-1.609-.218-2.382H12v4.545h6.482A5.568 5.568 0 0 1 16.04 18.02l3.924 3.587c2.29-2.11 3.545-5.209 3.545-9.333z"
-                        />
-                        <path
-                          fill="#34A853"
-                          d="M5.155 12.145c-.245-.736-.39-1.527-.39-2.336 0-.81.145-1.6.39-2.336L1.28 4.282A11.968 11.968 0 0 0 0 9.809c0 1.99.49 3.864 1.28 5.5l3.875-3.164z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
+              {reviewsData.map((review) => {
+                const isExpanded = !!expandedReviews[review.id];
+                const isLong = review.comment.length > 95;
+                const displayComment = isLong && !isExpanded
+                  ? `${review.comment.slice(0, 95)}...`
+                  : review.comment;
 
-                  <div>
-                    <span className="btn-typography text-gray-700 block mb-1">{review.name}</span>
-                    <span className="text-[10px] text-gray-400 font-light block mb-3">{review.time}</span>
-                    <div className="flex justify-center space-x-0.5 mb-4 text-luxury-gold">
-                      {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
-                      <span className="w-3.5 h-3.5 ml-1.5 bg-green-500 rounded-full flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></span>
+                return (
+                  <div
+                    key={review.id}
+                    className="bg-white rounded-lg p-6 pt-10 border border-luxury-gold/15 shadow-sm text-center relative flex flex-col justify-between w-[85%] sm:w-[45%] md:w-[calc(33.333%-16px)] flex-shrink-0 snap-start transition-all duration-300 min-h-[220px]"
+                  >
+                    {/* User Avatar Circle with Google G badge */}
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full border-4 border-white flex items-center justify-center shadow">
+                      <div className={`w-full h-full rounded-full flex items-center justify-center text-white font-bold text-lg ${review.avatarBg}`}>
+                        {review.avatarLetter}
+                      </div>
+                      {/* Google G badge */}
+                      <div className="absolute -bottom-1 -right-1 w-4.5 h-4.5 bg-white rounded-full flex items-center justify-center shadow border border-gray-100 z-20">
+                        <svg viewBox="0 0 24 24" className="w-2.5 h-2.5">
+                          <path
+                            fill="#EA4335"
+                            d="M5.266 9.765A7.077 7.077 0 0 1 12 4.909c1.69 0 3.218.6 4.418 1.582L19.91 3C17.782 1.145 15.055 0 12 0 7.354 0 3.373 2.682 1.39 6.573l3.876 3.192z"
+                          />
+                          <path
+                            fill="#FBBC05"
+                            d="M16.04 15.358A7.058 7.058 0 0 1 12 17.09c-3.155 0-5.836-2.09-6.845-4.945l-3.882 3.146C3.255 19.5 7.29 22 12 22c3.09 0 5.836-1.127 7.964-3.055l-3.924-3.587z"
+                          />
+                          <path
+                            fill="#4285F4"
+                            d="M23.509 12.273c0-.818-.082-1.609-.218-2.382H12v4.545h6.482A5.568 5.568 0 0 1 16.04 18.02l3.924 3.587c2.29-2.11 3.545-5.209 3.545-9.333z"
+                          />
+                          <path
+                            fill="#34A853"
+                            d="M5.155 12.145c-.245-.736-.39-1.527-.39-2.336 0-.81.145-1.6.39-2.336L1.28 4.282A11.968 11.968 0 0 0 0 9.809c0 1.99.49 3.864 1.28 5.5l3.875-3.164z"
+                          />
+                        </svg>
+                      </div>
                     </div>
-                    <p className="body-text !text-sm italic">
-                      "{review.comment}"
-                    </p>
+
+                    <div>
+                      <span className="btn-typography text-gray-700 block mb-1">{review.name}</span>
+                      <span className="text-[10px] text-gray-400 font-light block mb-3">{(review as any).time || 'Recent'}</span>
+                      <div className="flex justify-center space-x-0.5 mb-4 text-luxury-gold">
+                        {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
+                        <span className="w-3.5 h-3.5 ml-1.5 bg-green-500 rounded-full flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></span>
+                      </div>
+                      <p className="text-gray-600 text-xs sm:text-sm italic font-sans">
+                        "{displayComment}"
+                      </p>
+                    </div>
+                    {isLong && (
+                      <button
+                        onClick={() => toggleReadMore(review.id)}
+                        className="text-[11px] font-medium text-luxury-gold hover:underline transition-colors duration-200 mt-4 underline focus:outline-none block mx-auto cursor-pointer"
+                      >
+                        {isExpanded ? 'Read less' : 'Read more'}
+                      </button>
+                    )}
                   </div>
-                  {review.readMore && (
-                    <button className="text-[10px] text-gray-400 hover:text-luxury-gold transition-colors duration-200 mt-4 underline focus:outline-none block mx-auto cursor-pointer">
-                      Read more
-                    </button>
-                  )}
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             {/* Right Chevron Button */}
@@ -604,9 +660,9 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
 
       {/* 7. Locale Section */}
       <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="section-label mb-3">THE LOCALE</span>
-          <h2 className="section-heading">
+        <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
+          <span className="section-label mb-3 text-center">THE LOCALE</span>
+          <h2 className="section-heading text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center">
             Nearby Attraction in New Tehri
           </h2>
           <GoldDivider />

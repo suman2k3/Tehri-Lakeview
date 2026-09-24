@@ -30,7 +30,7 @@ export const Cancellation: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
+          <span className="section-label font-serif !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
           <h1 className="hero-heading !text-white">
             Cancellation Policy
           </h1>
@@ -40,7 +40,7 @@ export const Cancellation: React.FC = () => {
       {/* 2. Content Section */}
       <section className="luxury-section-padding px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="section-heading mb-4">Cancellation &amp; Refund Policy</h2>
+          <h2 className="section-heading mb-4"></h2>
           <p className="sub-heading !text-gray-500 max-w-2xl mx-auto">
             Please review our cancellation schedule and booking policies carefully.
           </p>
@@ -80,12 +80,20 @@ export const Cancellation: React.FC = () => {
           <p className="body-text mb-4">
             If you need to change your reservation or inquire about refunds, please contact our support desk directly.
           </p>
-          <a
-            href="tel:+917840050489"
-            className="inline-block btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
-          >
-            Contact Desk: +91 78400 50489
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="tel:+917840050489"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              +91 78400 50489
+            </a>
+            <a
+              href="tel:+919899950373"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              +91 98999 50373
+            </a>
+          </div>
         </div>
       </section>
     </div>

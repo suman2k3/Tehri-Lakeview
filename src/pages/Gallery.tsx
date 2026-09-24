@@ -3,6 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Maximize2 } from 'lucide-react';
 import { images } from '../config/images';
 import galleryHero from '../assets/images/gallery_hero.png';
+import gallery8 from '../assets/images/gallery_8.png';
+import gallery9 from '../assets/images/gallery_9.png';
+import gallery10 from '../assets/images/gallery_10.png';
+import gallery11 from '../assets/images/gallery_11.png';
+import gallery12 from '../assets/images/gallery_12.png';
 
 // Import newly requested video and image assets
 import img1 from '../assets/videos/img1.jpeg';
@@ -25,13 +30,18 @@ export const Gallery: React.FC = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const managementPhotos: GalleryItem[] = [
+    { src: gallery11, category: 'Management', caption: 'Panoramic Balcony Terrace Mountain View' },
+    { src: gallery8, category: 'Management', caption: 'Resort Night Illumination & Solar Deck' },
     { src: images.rooms.deluxe, category: 'Management', caption: 'Lakeside Deluxe Bedroom' },
-    { src: images.rooms.premium, category: 'Management', caption: 'Premium Ridgeview Suite' },
-    { src: images.rooms.suite, category: 'Management', caption: 'Luxury A-Frame Loft Bedroom' }, 
-    { src: images.food.menu1, category: 'Management', caption: 'Resort Signature Culinary Delights' },
+    { src: gallery9, category: 'Management', caption: 'Resort Main Entrance Gate & Sign' },
     { src: img1, category: 'Guest', caption: 'Morning Tea on the Terrace' },
+    { src: gallery10, category: 'Management', caption: 'Luxury Cottage Room Smart TV Setup' },
+    { src: gallery12, category: 'Management', caption: 'Resort Outdoor Dining & Buffet Setup' },
+    { src: images.rooms.suite, category: 'Management', caption: 'Luxury Wooden Loft Bedroom' },
     { src: img2, category: 'Guest', caption: 'Cottages Hillside Walkway' },
-    { src: img3, category: 'Guest', caption: 'Lake View from Cottage Window' }
+    { src: images.food.menu1, category: 'Management', caption: 'Resort Signature Culinary Delights' },
+    { src: img3, category: 'Guest', caption: 'Lake View from Cottage Window' },
+    { src: images.rooms.premium, category: 'Management', caption: 'Premium Ridgeview Suite' }
   ];
 
   const guestPhotos: GalleryItem[] = [
