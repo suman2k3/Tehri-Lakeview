@@ -178,7 +178,8 @@ export const About: React.FC = () => {
       </section>
 
       {/* 2. Narrative Section: Moments Made Special */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
@@ -244,10 +245,11 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
             </div>
           </motion.div>
         </div>
+        </div>
       </section>
 
       {/* 2b. Our Story Section */}
-      <section className="luxury-section-padding bg-[#D4E8F7]/30 border-t border-b border-luxury-gold/15">
+      <section className="luxury-section-padding bg-white border-t border-b border-luxury-gold/15">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
@@ -386,8 +388,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
                     </div>
 
                     <div>
-                      <span className="btn-typography text-gray-700 block mb-1">{review.name}</span>
-                      <span className="text-[10px] text-gray-400 font-light block mb-3">{(review as any).time || 'Recent'}</span>
+                      <span className="btn-typography text-gray-700 block mb-2">{review.name}</span>
                       <div className="flex justify-center space-x-0.5 mb-4 text-luxury-gold">
                         {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
                         <span className="w-3.5 h-3.5 ml-1.5 bg-green-500 rounded-full flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></span>
@@ -437,7 +438,8 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
       </section>
 
       {/* 4. The Locale (Nearby Attractions) Section */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
           <h2 className="section-heading text-center sm:whitespace-nowrap">
@@ -514,6 +516,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
               />
             ))}
           </div>
+        </div>
         </div>
       </section>
     </div>

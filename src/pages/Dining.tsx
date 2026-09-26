@@ -24,7 +24,8 @@ export const Dining: React.FC = () => {
       </section>
 
       {/* 2. First Section: Lakeside Deck Dining Experience */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
@@ -78,10 +79,11 @@ Whether you're starting your day with a hearty breakfast, enjoying a family lunc
             </div>
           </motion.div>
         </div>
+        </div>
       </section>
 
       {/* 3. Second Section: Taste Delicious Moments */}
-      <section className="luxury-section-padding bg-white/40 border-t border-luxury-gold/15">
+      <section className="luxury-section-padding bg-white border-t border-luxury-gold/15">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
             <span className="section-label mb-3 text-center">FRESH TASTE</span>
@@ -119,7 +121,8 @@ Whether you're starting your day with a hearty breakfast, enjoying a family lunc
       </section>
 
       {/* 4. Third Section: Bhagirathi Bistro Feast */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-luxury-gold/15">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/15">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Staggered overlapping images on the left */}
           <motion.div
@@ -220,6 +223,7 @@ Savor delicious meals while overlooking the breathtaking beauty of Tehri Lake. F
               </button>
             </div>
           </motion.div>
+        </div>
         </div>
       </section>
     </div>

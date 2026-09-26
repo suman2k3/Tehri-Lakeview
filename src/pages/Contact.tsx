@@ -80,7 +80,8 @@ export const Contact: React.FC = () => {
       </section>
 
       {/* 2. Main Section: Image + Contact Form */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Landscape Resort Image */}
           <motion.div
@@ -177,10 +178,11 @@ export const Contact: React.FC = () => {
             </form>
           </motion.div>
         </div>
+        </div>
       </section>
 
       {/* 3. Info Cards Grid (Light Cream Section) */}
-      <section className="luxury-section-padding bg-[#F9F6F0]">
+      <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Email Card */}

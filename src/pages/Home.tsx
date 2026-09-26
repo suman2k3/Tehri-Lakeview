@@ -354,7 +354,7 @@ export const Home: React.FC = () => {
 
 
       {/* 2. Welcome Section */}
-      <section className="luxury-section-padding relative">
+      <section className="luxury-section-padding relative bg-luxury-cream">
         <MandalaOrnaments />
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center relative z-10">
@@ -407,7 +407,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 3. Accommodations Section */}
-      <section className="luxury-section-padding bg-[#D4E8F7] border-t border-luxury-gold/10">
+      <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="section-label mb-3">ACCOMMODATIONS</span>
@@ -514,7 +514,8 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 5. Dining Section */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-12 flex flex-col items-center justify-center">
           <h2 className="section-heading sm:whitespace-nowrap text-center mb-4">
             Dining Experience
@@ -555,10 +556,11 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             />
           </motion.div>
         </div>
+        </div>
       </section>
 
       {/* 6. Guest Reviews Section */}
-      <section className="luxury-section-padding bg-[#D4E8F7] border-t border-luxury-gold/10">
+      <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
             <span className="section-label mb-3 text-center">GUEST REVIEWS</span>
@@ -567,7 +569,6 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
             </h2>
             <GoldDivider />
           </div>
-
           {/* Review Slider Container with Relative Positioning for Chevrons */}
           <div className="relative max-w-5xl mx-auto">
             {/* Left Chevron Button */}
@@ -627,8 +628,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
                     </div>
 
                     <div>
-                      <span className="btn-typography text-gray-700 block mb-1">{review.name}</span>
-                      <span className="text-[10px] text-gray-400 font-light block mb-3">{(review as any).time || 'Recent'}</span>
+                      <span className="btn-typography text-gray-700 block mb-2">{review.name}</span>
                       <div className="flex justify-center space-x-0.5 mb-4 text-luxury-gold">
                         {[...Array(review.rating)].map((_, i) => <Star key={i} className="w-3.5 h-3.5 fill-current" />)}
                         <span className="w-3.5 h-3.5 ml-1.5 bg-green-500 rounded-full flex items-center justify-center"><Check className="w-2.5 h-2.5 text-white" /></span>
@@ -678,7 +678,8 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 7. Locale Section */}
-      <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
           <h2 className="section-heading text-center sm:whitespace-nowrap">
@@ -755,6 +756,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               />
             ))}
           </div>
+        </div>
         </div>
       </section>
     </div>
