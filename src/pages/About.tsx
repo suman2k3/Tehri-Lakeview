@@ -64,6 +64,18 @@ export const About: React.FC = () => {
       image: images.lake.tehriLake
     },
     {
+      title: 'Thrilling Water Sports at Tehri Lake',
+      description: "Experience the thrill of water sports at Tehri Lake, where adventure meets the breathtaking beauty of Uttarakhand's mountains and crystal-clear waters.",
+      distance: '0 km (Tehri Lake)',
+      image: images.lake.waterSports
+    },
+    {
+      title: 'Paragliding Adventures at Tehri Lake',
+      description: 'Experience the thrill of paragliding over Tehri Lake with breathtaking aerial views of the turquoise waters and majestic mountains. Soar through the skies and create unforgettable adventure memories in Uttarakhand.',
+      distance: '0 km (Tehri Lake)',
+      image: images.lake.paragliding
+    },
+    {
       title: 'Dobra Chanti Bridge',
       description: "A modern engineering marvel that showcases the grandeur and beauty of Uttarakhand's suspension link.",
       distance: '12 km',
@@ -159,7 +171,7 @@ export const About: React.FC = () => {
         />
         <div className="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
           <span className="section-label !text-luxury-gold block text-center tracking-widest mb-2">ABOUT</span>
-          <h1 className="hero-heading font-serif !text-white whitespace-nowrap !font-bold !text-[5.5vw] sm:!text-[36px] md:!text-[48px] lg:!text-[68px]">
+          <h1 className="hero-heading font-serif !text-white !font-semibold md:whitespace-nowrap">
             Tehri Lakeview Sunrise Cottages
           </h1>
         </div>
@@ -174,7 +186,7 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="section-heading text-[6.5vw] sm:text-3xl md:text-4xl lg:text-[42px] xl:text-5xl lg:whitespace-nowrap text-center lg:text-left">
+            <h2 className="section-heading lg:whitespace-nowrap text-center lg:text-left">
               Moments Made Special
             </h2>
             <div className="lg:justify-start flex justify-center">
@@ -245,7 +257,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
             className="flex flex-col items-center justify-center w-full"
           >
             <span className="section-label mb-3 text-center block">OUR STORY</span>
-            <h2 className="section-heading text-[5.5vw] sm:text-2xl md:text-3xl lg:text-3xl xl:text-[34px] sm:whitespace-nowrap text-center">
+            <h2 className="section-heading sm:whitespace-nowrap text-center">
               The Vision Behind Your Stay
             </h2>
             <div className="flex justify-center">
@@ -310,7 +322,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16">
             <span className="section-label mb-3">GUEST REVIEWS</span>
-            <h2 className="font-serif !text-white sm:whitespace-nowrap text-[6.5vw] sm:!text-2xl md:!text-3xl lg:!text-4xl text-center font-normal tracking-wide">
+            <h2 className="section-heading !text-white sm:whitespace-nowrap text-center font-normal tracking-wide">
               Tehri Lakeview Sunrise Cottages
             </h2>
             <GoldDivider />
@@ -426,22 +438,22 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
 
       {/* 4. The Locale (Nearby Attractions) Section */}
       <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
-          <h2 className="section-heading sm:whitespace-nowrap text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl text-center">
+          <h2 className="section-heading text-center sm:whitespace-nowrap">
             Nearby Attraction in New Tehri
           </h2>
           <GoldDivider />
         </div>
 
-        {/* Attractions Slide Layout with overlapping card in bottom-right corner */}
-        <div className="max-w-5xl mx-auto relative px-4">
-          <div className="relative w-full h-128 sm:h-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl border-4 border-white">
+        {/* Attractions Slide Layout */}
+        <div className="max-w-5xl mx-auto relative px-2 sm:px-4">
+          <div className="relative w-full h-[380px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl border-2 sm:border-4 border-white bg-gray-100">
             {attractions.map((attraction, index) => (
               <div
                 key={attraction.title}
-                className={`absolute inset-0 transition-all duration-1000 transform ${
-                  index === activeLocaleIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0'
+                className={`absolute inset-0 transition-all duration-700 transform ${
+                  index === activeLocaleIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0 pointer-events-none'
                 }`}
               >
                 <img
@@ -450,18 +462,21 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
                   className="w-full h-full object-cover"
                 />
                 
-                {/* Floating Information Card - Bottom Right Overlay */}
+                {/* Subtle gradient overlay on mobile for high legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent sm:hidden z-10 pointer-events-none" />
+
+                {/* Information Card - Bottom Right Overlay */}
                 {index === activeLocaleIndex && (
                   <motion.div
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 15 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2, duration: 0.6 }}
-                    className="absolute bottom-6 right-6 left-6 sm:left-auto bg-white p-6 max-w-sm rounded shadow-lg border-l-4 border-luxury-gold text-left z-20"
+                    transition={{ delay: 0.15, duration: 0.5 }}
+                    className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:right-6 sm:left-auto bg-white/95 sm:bg-white backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-6 max-w-sm rounded-lg shadow-xl border-l-4 border-luxury-gold text-left z-20"
                   >
-                    <h3 className="sub-heading mb-2">
+                    <h3 className="sub-heading !text-base sm:!text-lg md:!text-xl font-medium mb-1.5 leading-snug">
                       {attraction.title}
                     </h3>
-                    <p className="body-text !text-sm mb-4">
+                    <p className="body-text !text-xs sm:!text-sm line-clamp-3 sm:line-clamp-none text-gray-700 leading-relaxed">
                       {attraction.description}
                     </p>
                   </motion.div>
@@ -470,14 +485,30 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
             ))}
           </div>
 
-          {/* Dots Indicator below */}
-          <div className="flex justify-center space-x-2 mt-8">
+          {/* Navigation Arrows */}
+          <button
+            onClick={() => setActiveLocaleIndex((prev) => (prev === 0 ? attractions.length - 1 : prev - 1))}
+            className="absolute left-1 sm:-left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-gray-100 shadow-md flex items-center justify-center text-gray-600 hover:text-luxury-gold transition-all duration-200 z-30 cursor-pointer"
+            aria-label="Previous attraction"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => setActiveLocaleIndex((prev) => (prev + 1) % attractions.length)}
+            className="absolute right-1 sm:-right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-gray-100 shadow-md flex items-center justify-center text-gray-600 hover:text-luxury-gold transition-all duration-200 z-30 cursor-pointer"
+            aria-label="Next attraction"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
             {attractions.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveLocaleIndex(idx)}
-                className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
-                  idx === activeLocaleIndex ? 'bg-luxury-gold w-3' : 'bg-gray-300 hover:bg-gray-400'
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  idx === activeLocaleIndex ? 'bg-luxury-gold w-5' : 'bg-gray-300 hover:bg-gray-400 w-2'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />

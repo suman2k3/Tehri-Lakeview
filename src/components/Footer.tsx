@@ -103,11 +103,16 @@ export const Footer: React.FC = () => {
                   </a>
                 </div>
               </li>
-              <li className="flex items-center">
-                <Mail className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0" />
-                <a href="mailto:info@tehrilakeview.com" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
-                  info@tehrilakeview.com
-                </a>
+              <li className="flex items-start">
+                <Mail className="w-4 h-4 mr-2.5 text-luxury-gold flex-shrink-0 mt-1" />
+                <div className="flex flex-col space-y-1">
+                  <a href="mailto:info@tehrilakeview.com" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                    info@tehrilakeview.com
+                  </a>
+                  <a href="mailto:rnrinternational89@gmail.com" className="text-gray-400 hover:text-luxury-gold transition-colors duration-300">
+                    rnrinternational89@gmail.com
+                  </a>
+                </div>
               </li>
               <li className="flex items-center pt-2">
                 <div className="flex items-center space-x-4 pl-[26px]">

@@ -180,6 +180,18 @@ export const Home: React.FC = () => {
       image: images.lake.tehriLake
     },
     {
+      title: 'Thrilling Water Sports at Tehri Lake',
+      description: "Experience the thrill of water sports at Tehri Lake, where adventure meets the breathtaking beauty of Uttarakhand's mountains and crystal-clear waters.",
+      distance: '0 km (Tehri Lake)',
+      image: images.lake.waterSports
+    },
+    {
+      title: 'Paragliding Adventures at Tehri Lake',
+      description: 'Experience the thrill of paragliding over Tehri Lake with breathtaking aerial views of the turquoise waters and majestic mountains. Soar through the skies and create unforgettable adventure memories in Uttarakhand.',
+      distance: '0 km (Tehri Lake)',
+      image: images.lake.paragliding
+    },
+    {
       title: 'Dobra Chanti Bridge',
       description: "A modern engineering marvel that showcases the grandeur and beauty of Uttarakhand's suspension link.",
       distance: '12 km',
@@ -248,8 +260,8 @@ export const Home: React.FC = () => {
     return () => clearInterval(timer);
   }, [reviewsData.length]);
 
-  const desktopHeroSlides = [images.hero.bg, images.hero.bg2, images.hero.bg3];
-  const mobileHeroSlides = [images.hero.bg, images.hero.bg2, images.hero.bg3Mobile];
+  const desktopHeroSlides = [images.hero.bg, images.hero.bg2, images.hero.bg4, images.hero.bg3, images.hero.bg5];
+  const mobileHeroSlides = [images.hero.bg, images.hero.bg2Mobile, images.hero.bg4Mobile, images.hero.bg3Mobile, images.hero.bg5];
 
   // Auto-play timer for Hero slider (4 seconds per slide)
   React.useEffect(() => {
@@ -281,7 +293,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
-            className={`absolute inset-0 bg-cover ${heroSlide === 2 ? 'bg-[center_18%]' : 'bg-center'}`}
+            className={`absolute inset-0 bg-cover ${heroSlide === 3 ? 'bg-[center_18%]' : 'bg-center'}`}
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${mobileHeroSlides[heroSlide]})`,
               filter: 'brightness(1.15)',
@@ -296,7 +308,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1.2 }}
-            className={`absolute inset-0 bg-cover ${heroSlide === 2 ? 'bg-[center_18%]' : 'bg-center'}`}
+            className={`absolute inset-0 bg-cover ${heroSlide === 3 ? 'bg-[center_18%]' : 'bg-center'}`}
             style={{
               backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${desktopHeroSlides[heroSlide]})`,
               filter: 'brightness(1.15)',
@@ -309,7 +321,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="hero-heading font-serif !text-white whitespace-nowrap !font-bold !text-[5.5vw] sm:!text-[36px] md:!text-[48px] lg:!text-[68px] mb-3"
+            className="hero-heading font-serif !text-white !font-semibold mb-3 md:whitespace-nowrap"
           >
            Tehri Lakeview Sunrise Cottages
           </motion.h1>
@@ -318,7 +330,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="sub-heading font-cormorant !text-white !text-[3.8vw] sm:!text-xl md:!text-2xl lg:!text-[28px] tracking-wider max-w-2xl mx-auto mb-6 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
+            className="sub-heading font-cormorant !text-white tracking-wider max-w-2xl mx-auto mb-6 font-medium drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]"
           >
             Peaceful Stay Near Tehri Lake
           </motion.p>
@@ -347,7 +359,7 @@ export const Home: React.FC = () => {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center relative z-10">
           <span className="section-label mb-3 text-center">ABOUT</span>
-          <h2 className="font-serif text-luxury-charcoal text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center font-normal tracking-wide">
+          <h2 className="section-heading text-center font-normal tracking-wide sm:whitespace-nowrap">
             Tehri Lakeview Sunrise Cottages
           </h2>
           <GoldDivider />
@@ -400,7 +412,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="section-label mb-3">ACCOMMODATIONS</span>
             <h2 className="section-heading">
-              A Refined Stay
+              A premium stay
             </h2>
             <GoldDivider />
           </div>
@@ -422,7 +434,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.deluxe}
-                  alt="Fully Furnished"
+                  alt="Luxury Stay"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
@@ -430,7 +442,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Fully Furnished
+                  Luxury Stay
                 </h3>
               </div>
             </motion.div>
@@ -446,7 +458,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.suiteHome}
-                  alt="High-Speed Wi-Fi"
+                  alt="Ev charging facility"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover object-left-top group-hover:scale-103 transition-transform duration-500"
@@ -454,7 +466,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  High-Speed Wi-Fi
+                  Ev charging facility
                 </h3>
               </div>
             </motion.div>
@@ -470,7 +482,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               <div className="h-80 overflow-hidden">
                 <img
                   src={images.rooms.premium}
-                  alt="Comfortable Stay"
+                  alt="High-Speed Free Wi-Fi"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
@@ -478,7 +490,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
               </div>
               <div className="p-5 border-t border-luxury-gold/10 text-center">
                 <h3 className="sub-heading group-hover:text-luxury-gold transition-colors duration-200">
-                  Comfortable Stay
+                  High-Speed Free Wi-Fi
                 </h3>
               </div>
             </motion.div>
@@ -504,7 +516,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       {/* 5. Dining Section */}
       <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-4xl mx-auto mb-12 flex flex-col items-center justify-center">
-          <h2 className="section-heading text-[6.5vw] sm:text-3xl md:text-4xl lg:text-5xl sm:whitespace-nowrap text-center mb-4">
+          <h2 className="section-heading sm:whitespace-nowrap text-center mb-4">
             Dining Experience
           </h2>
           <GoldDivider />
@@ -550,7 +562,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
             <span className="section-label mb-3 text-center">GUEST REVIEWS</span>
-            <h2 className="section-heading text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center">
+            <h2 className="section-heading sm:whitespace-nowrap text-center">
               Guest Experiences at New Tehri
             </h2>
             <GoldDivider />
@@ -667,52 +679,82 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
 
       {/* 7. Locale Section */}
       <section className="luxury-section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
-          <h2 className="section-heading text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center">
+          <h2 className="section-heading text-center sm:whitespace-nowrap">
             Nearby Attraction in New Tehri
           </h2>
           <GoldDivider />
         </div>
 
-        {/* Large Image with Overlapping Text Card */}
-        <div className="relative max-w-5xl mx-auto rounded overflow-hidden shadow-2xl border-4 border-white h-128 bg-gray-100">
-          {attractions.map((attraction, index) => (
-            <div
-              key={attraction.title}
-              className={`absolute inset-0 transition-opacity duration-700 ${
-                index === activeLocaleIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
-              }`}
-            >
-              <img
-                src={attraction.image}
-                alt={attraction.title}
-                className="w-full h-full object-cover"
-              />
-              
-              {/* Overlapping Text Card */}
-              <div className="absolute bottom-6 right-6 bg-white p-6 max-w-sm rounded shadow-xl border border-gray-100 z-20">
-                <h3 className="sub-heading mb-2">{attraction.title}</h3>
-                <p className="body-text !text-sm mb-4">
-                  {attraction.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Attractions Slide Layout */}
+        <div className="max-w-5xl mx-auto relative px-2 sm:px-4">
+          <div className="relative w-full h-[380px] sm:h-[450px] md:h-[500px] overflow-hidden rounded-lg shadow-2xl border-2 sm:border-4 border-white bg-gray-100">
+            {attractions.map((attraction, index) => (
+              <div
+                key={attraction.title}
+                className={`absolute inset-0 transition-all duration-700 transform ${
+                  index === activeLocaleIndex ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0 pointer-events-none'
+                }`}
+              >
+                <img
+                  src={attraction.image}
+                  alt={attraction.title}
+                  className="w-full h-full object-cover"
+                />
 
-        {/* Dots */}
-        <div className="flex justify-center space-x-2 mt-8">
-          {attractions.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setActiveLocaleIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === activeLocaleIndex ? 'bg-luxury-gold w-4' : 'bg-gray-300 hover:bg-gray-400'
-              }`}
-              aria-label={`Go to attraction ${index + 1}`}
-            />
-          ))}
+                {/* Subtle gradient overlay on mobile for high legibility */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent sm:hidden z-10 pointer-events-none" />
+
+                {/* Information Card - Bottom Right on Desktop, Bottom Full-width on Mobile */}
+                {index === activeLocaleIndex && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15, duration: 0.5 }}
+                    className="absolute bottom-3 left-3 right-3 sm:bottom-6 sm:right-6 sm:left-auto bg-white/95 sm:bg-white backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-6 max-w-sm rounded-lg shadow-xl border-l-4 border-luxury-gold text-left z-20"
+                  >
+                    <h3 className="sub-heading !text-base sm:!text-lg md:!text-xl font-medium mb-1.5 leading-snug">
+                      {attraction.title}
+                    </h3>
+                    <p className="body-text !text-xs sm:!text-sm line-clamp-3 sm:line-clamp-none text-gray-700 leading-relaxed">
+                      {attraction.description}
+                    </p>
+                  </motion.div>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* Navigation Arrows for Easy Mobile & Desktop Navigation */}
+          <button
+            onClick={() => setActiveLocaleIndex((prev) => (prev === 0 ? attractions.length - 1 : prev - 1))}
+            className="absolute left-1 sm:-left-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-gray-100 shadow-md flex items-center justify-center text-gray-600 hover:text-luxury-gold transition-all duration-200 z-30 cursor-pointer"
+            aria-label="Previous attraction"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={() => setActiveLocaleIndex((prev) => (prev + 1) % attractions.length)}
+            className="absolute right-1 sm:-right-4 top-1/2 -translate-y-1/2 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white border border-gray-100 shadow-md flex items-center justify-center text-gray-600 hover:text-luxury-gold transition-all duration-200 z-30 cursor-pointer"
+            aria-label="Next attraction"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center space-x-2 mt-6 sm:mt-8">
+            {attractions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveLocaleIndex(index)}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                  index === activeLocaleIndex ? 'bg-luxury-gold w-5' : 'bg-gray-300 hover:bg-gray-400 w-2'
+                }`}
+                aria-label={`Go to attraction ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>

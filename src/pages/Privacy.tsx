@@ -30,10 +30,13 @@ export const Privacy: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label font-serif !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
-          <h1 className="hero-heading !text-white">
-            Privacy Policy
+          <span className="section-label !text-luxury-gold mb-2 block">LEGAL</span>
+          <h1 className="hero-heading font-serif !text-white !font-semibold md:whitespace-nowrap">
+            Tehri Lakeview Sunrise Cottages
           </h1>
+          <p className="text-white/90 text-sm sm:text-base md:text-lg tracking-widest uppercase mt-2 font-medium">
+            Privacy Policy
+          </p>
         </div>
       </section>
 
@@ -80,12 +83,20 @@ export const Privacy: React.FC = () => {
           <p className="body-text mb-4">
             If you have questions regarding our data collection policies or wish to inspect your registration logs, please email our security officer.
           </p>
-          <a
-            href="mailto:info@tehrilakeview.com"
-            className="inline-block btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
-          >
-            Email: info@tehrilakeview.com
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a
+              href="mailto:info@tehrilakeview.com"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              info@tehrilakeview.com
+            </a>
+            <a
+              href="mailto:rnrinternational89@gmail.com"
+              className="btn-typography bg-luxury-bronze hover:bg-luxury-bronze-dark text-white px-6 py-3 rounded transition-colors duration-300 shadow-md"
+            >
+              rnrinternational89@gmail.com
+            </a>
+          </div>
         </div>
       </section>
     </div>

@@ -85,7 +85,7 @@ Whether you're starting your day with a hearty breakfast, enjoying a family lunc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
             <span className="section-label mb-3 text-center">FRESH TASTE</span>
-            <h2 className="section-heading text-[6.5vw] sm:text-2xl md:text-3xl lg:text-4xl sm:whitespace-nowrap text-center">
+            <h2 className="section-heading sm:whitespace-nowrap text-center">
               Taste Delicious Moments At Tehri
             </h2>
             <GoldDivider />

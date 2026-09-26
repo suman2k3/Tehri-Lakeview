@@ -118,7 +118,7 @@ export const Rooms: React.FC = () => {
         />
         <div className="relative z-10 text-white max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="section-label !text-luxury-gold mb-3 block">ROOMS</span>
-          <h1 className="hero-heading !text-white sm:whitespace-nowrap !text-[6.5vw] sm:!text-[30px] md:!text-[42px] lg:!text-[52px] xl:!text-[60px]">
+          <h1 className="hero-heading !text-white sm:whitespace-nowrap">
             Book Your Luxury Stay With Us
           </h1>
         </div>

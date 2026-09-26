@@ -56,10 +56,13 @@ export const Terms: React.FC = () => {
           }}
         />
         <div className="relative z-10 text-white max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="section-label font-serif !text-luxury-gold mb-3">TEHRI LAKEVIEW SUNRISE COTTAGES</span>
-          <h1 className="hero-heading !text-white">
-            Terms &amp; Conditions
+          <span className="section-label !text-luxury-gold mb-2 block">LEGAL</span>
+          <h1 className="hero-heading font-serif !text-white !font-semibold md:whitespace-nowrap">
+            Tehri Lakeview Sunrise Cottages
           </h1>
+          <p className="text-white/90 text-sm sm:text-base md:text-lg tracking-widest uppercase mt-2 font-medium">
+            Terms &amp; Conditions
+          </p>
         </div> 
       </section>
 

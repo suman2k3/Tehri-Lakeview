@@ -3,8 +3,12 @@ import logoImg from '../assets/images/logo/logo.png';
 import dividerImg from '../assets/images/divider.png';
 import heroBg from '../assets/images/hero/hero_bg.jpg';
 import heroBg2 from '../assets/images/hero/hero_bg_2.jpg';
+import heroBg2Mobile from '../assets/images/hero/hero_bg_2_mobile.jpg';
 import heroBg3 from '../assets/images/hero/hero_bg_3.png';
 import heroBg3Mobile from '../assets/images/hero/hero_bg_3_mobile.jpg';
+import heroBg4 from '../assets/images/hero/hero_bg_4.jpg';
+import heroBg4Mobile from '../assets/images/hero/hero_bg_4_mobile.png';
+import heroBg5 from '../assets/images/hero/hero_bg_5.jpg';
 import subpageHero from '../assets/images/hero/subpage_hero.png';
 import aboutBg from '../assets/images/hero/about_bg.jpg';
 import contactBg from '../assets/images/hero/contact_bg.png';
@@ -28,6 +32,8 @@ import menu1 from '../assets/images/food/menu_1.jpg';
 import menu2 from '../assets/images/food/menu_2.jpg';
 import boating from '../assets/images/activities/boating.png';
 import adventure from '../assets/images/activities/adventure.jpg';
+import paragliding from '../assets/images/lake/paragliding.png';
+import waterSports from '../assets/images/lake/water_sports.jpg';
 import dobraChantiBridge from '../assets/images/lake/dobra_chanti_bridge.jpg';
 import tehriDamViewpoint from '../assets/images/lake/tehri_dam_viewpoint.jpg';
 import kodiaJungle from '../assets/images/lake/kodia_jungle.jpg';
@@ -48,8 +54,12 @@ export const images = {
   hero: {
     bg: heroBg,
     bg2: heroBg2,
+    bg2Mobile: heroBg2Mobile,
+    bg4: heroBg4,
+    bg4Mobile: heroBg4Mobile,
     bg3: heroBg3,
     bg3Mobile: heroBg3Mobile,
+    bg5: heroBg5,
     subpageBg: subpageHero,
     about: aboutBg,
     contact: contactBg,
@@ -95,6 +105,8 @@ export const images = {
     jungle: kodiaJungle,
     surkandaDevi: surkandaDevi,
     tehriLake: tehriLake,
+    waterSports: waterSports,
+    paragliding: paragliding,
   },
   family: {
     group: familyView,

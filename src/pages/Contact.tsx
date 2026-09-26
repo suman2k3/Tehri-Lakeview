@@ -188,9 +188,14 @@ export const Contact: React.FC = () => {
               <div className="w-10 h-10 rounded-full border border-luxury-gold/30 text-luxury-gold flex items-center justify-center mb-4">
                 <Mail className="w-4 h-4 stroke-[1.5]" />
               </div>
-              <a href="mailto:reservation@tehrilakeview.com" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
-                info@tehrilakeview.com
-              </a>
+              <div className="flex flex-col space-y-1">
+                <a href="mailto:info@tehrilakeview.com" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
+                  info@tehrilakeview.com
+                </a>
+                <a href="mailto:rnrinternational89@gmail.com" className="body-text !text-sm text-gray-700 hover:text-luxury-gold transition-colors duration-300">
+                  rnrinternational89@gmail.com
+                </a>
+              </div>
             </div>
 
             {/* Address Card */}
