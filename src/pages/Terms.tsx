@@ -75,7 +75,7 @@ export const Terms: React.FC = () => {
           </p>
         </div>
 
-        <div className="space-y-16">
+        <div className="space-y-8 sm:space-y-10">
           {sections.map((section) => (
             <motion.div
               key={section.id}
@@ -110,7 +110,7 @@ export const Terms: React.FC = () => {
         </div>
 
         {/* Support Note */}
-        <div className="mt-16 text-center bg-white p-8 border border-luxury-gold/15 rounded-sm">
+        <div className="mt-8 sm:mt-10 text-center bg-white p-8 border border-luxury-gold/15 rounded-sm">
           <h4 className="sub-heading !text-luxury-charcoal mb-2">Have Questions About Our Terms?</h4>
           <p className="body-text mb-4">
             For any custom queries, group booking policies, or clarifications, please reach out to our reservations desk.

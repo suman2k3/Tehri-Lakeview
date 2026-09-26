@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Cinzel:wght@400..900&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 
 @theme {
   --color-luxury-gold: #C49A62;
@@ -13,10 +13,11 @@
   --color-luxury-bronze-dark: #1F3443;
   --color-luxury-footer: #1F3443;
   
-  --font-serif: "Playfair Display", "Cinzel", serif;
-  --font-sans: "Lato", "Inter", "Montserrat", sans-serif;
+  --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+  --font-sans: "Open Sans", "Lato", sans-serif;
   --font-bodoni: "Bodoni Moda", serif;
   --font-cormorant: "Cormorant Garamond", serif;
+  --font-opensans: "Open Sans", sans-serif;
   --font-lato: "Lato", sans-serif;
   
   --spacing-128: 32rem;
@@ -32,6 +33,10 @@
 
 .font-cormorant {
   font-family: "Cormorant Garamond", serif;
+}
+
+.font-opensans {
+  font-family: "Open Sans", sans-serif;
 }
 
 @layer base {
@@ -62,7 +67,16 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif text-luxury-charcoal tracking-wide;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    @apply text-luxury-charcoal tracking-wide;
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: clamp(0.9375rem, 0.4vw + 0.875rem, 18px);
+    font-weight: 400;
+    line-height: 1.7;
   }
 }
 
@@ -116,20 +130,20 @@
 
 /* Typography System Utility Classes - Responsive Fluid Scale with clamp() */
 .hero-heading {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Cormorant Garamond", serif !important;
   font-weight: 600 !important;
-  font-size: clamp(1.35rem, 3.5vw + 0.4rem, 52px) !important;
+  font-size: clamp(1.6rem, 4vw + 0.5rem, 52px) !important;
   line-height: 1.15 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.01em !important;
   color: #1E1E1E;
 }
 
 .section-heading {
-  font-family: "Playfair Display", serif !important;
-  font-weight: 400 !important;
-  font-size: clamp(1.35rem, 3.2vw + 0.4rem, 3.5rem) !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(1.6rem, 3.8vw + 0.5rem, 48px) !important;
   line-height: 1.2 !important;
-  letter-spacing: -0.02em !important;
+  letter-spacing: -0.01em !important;
   color: #1E1E1E;
 }
 
@@ -144,17 +158,17 @@
 }
 
 .sub-heading {
-  font-family: "Playfair Display", serif !important;
-  font-weight: 400 !important;
-  font-size: clamp(1.0625rem, 1.5vw + 0.6rem, 1.75rem) !important;
-  line-height: 1.5 !important;
+  font-family: "Cormorant Garamond", serif !important;
+  font-weight: 600 !important;
+  font-size: clamp(1.125rem, 1.8vw + 0.6rem, 1.75rem) !important;
+  line-height: 1.4 !important;
   color: #222222 !important;
 }
 
 .body-text {
-  font-family: "Lato", sans-serif !important;
+  font-family: "Open Sans", sans-serif !important;
   font-weight: 400 !important;
-  font-size: clamp(0.9375rem, 0.6vw + 0.75rem, 1.125rem) !important;
+  font-size: clamp(0.9375rem, 0.4vw + 0.875rem, 18px) !important;
   line-height: 1.7 !important;
   letter-spacing: normal !important;
   color: #4E5968 !important;
@@ -183,6 +197,6 @@
 }
 
 .luxury-section-padding {
-  padding-top: clamp(40px, 8vw, 80px) !important;
-  padding-bottom: clamp(40px, 8vw, 80px) !important;
+  padding-top: clamp(28px, 4.5vw, 48px) !important;
+  padding-bottom: clamp(28px, 4.5vw, 48px) !important;
 }

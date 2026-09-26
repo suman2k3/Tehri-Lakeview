@@ -78,7 +78,7 @@ export const Cancellation: React.FC = () => {
         </motion.div>
 
         {/* Support Note */}
-        <div className="mt-16 text-center bg-white p-8 border border-luxury-gold/15 rounded-sm">
+        <div className="mt-8 sm:mt-10 text-center bg-white p-8 border border-luxury-gold/15 rounded-sm">
           <h4 className="sub-heading !text-luxury-charcoal mb-2">Need to Modify or Cancel Your Stay?</h4>
           <p className="body-text mb-4">
             If you need to change your reservation or inquire about refunds, please contact our support desk directly.

@@ -106,7 +106,7 @@ export const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-left"
           >
-            <h2 className="section-heading mb-4">
+            <h2 className="section-heading mb-4 lg:whitespace-nowrap lg:!text-[clamp(1.3rem,1.75vw,1.75rem)]">
               Get in Touch with Tehri Lakeview Sunrise Cottages
             </h2>
             <p className="body-text mb-8 max-w-lg">

@@ -83,7 +83,7 @@ export const Gallery: React.FC = () => {
   return (
     <div className="bg-luxury-cream min-h-screen pb-24 overflow-hidden">
       {/* Hero Banner */}
-      <section className="relative h-[45vh] flex items-center justify-center text-center mb-16">
+      <section className="relative h-[45vh] flex items-center justify-center text-center mb-8 sm:mb-10">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -99,7 +99,7 @@ export const Gallery: React.FC = () => {
       </section>
 
       {/* Management Photos Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {managementPhotos.map((item, index) => (
             <motion.div
@@ -164,11 +164,11 @@ export const Gallery: React.FC = () => {
       </section>
 
       {/* Video Reels Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24 mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 sm:mt-12 mb-8">
         <h2 className="section-heading text-center mb-4">
           Resort Video Reels &amp; Experiences
         </h2>
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-6">
           <div className="w-16 h-[1px] bg-luxury-gold/50" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">

@@ -8,7 +8,7 @@ import { DiningExperienceSection } from '../components/DiningExperienceSection';
 // Custom Gold Loop Divider component to match the screenshot decoration
 // Custom Gold Loop Divider component to match the screenshot decoration
 export const GoldDivider: React.FC = () => (
-  <div className="flex items-center justify-center my-6 select-none w-full">
+  <div className="flex items-center justify-center my-3.5 select-none w-full">
     <img 
       src={images.logo.divider} 
       alt="Luxury Gold Divider" 
@@ -360,7 +360,7 @@ export const Home: React.FC = () => {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center justify-center relative z-10">
           <span className="section-label mb-3 text-center">ABOUT</span>
-          <h2 className="section-heading text-center font-normal tracking-wide sm:whitespace-nowrap">
+          <h2 className="section-heading text-center font-semibold tracking-wide sm:whitespace-nowrap">
             Tehri Lakeview Sunrise Cottages
           </h2>
           <GoldDivider />
@@ -381,7 +381,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
           </div>
 
           {/* Ribbon Badge */}
-          <div className="flex justify-center mb-16">
+          <div className="flex justify-center mb-8 sm:mb-10">
             <div className="relative bg-luxury-bronze text-white btn-typography py-3.5 px-8 shadow-md">
               {/* Left Ribbon Tail */}
               <div className="absolute top-0 -left-3 h-full w-3 bg-luxury-bronze-dark [clip-path:polygon(100%_0,0_50%,100%_100%)]" />
@@ -410,10 +410,10 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       {/* 3. Accommodations Section */}
       <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
             <span className="section-label mb-3">ACCOMMODATIONS</span>
             <h2 className="section-heading">
-              A premium stay
+              A Premium Stay
             </h2>
             <GoldDivider />
           </div>
@@ -520,7 +520,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       {/* 6. Guest Reviews Section */}
       <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-16 flex flex-col items-center justify-center">
+          <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 flex flex-col items-center justify-center">
             <span className="section-label mb-3 text-center">GUEST REVIEWS</span>
             <h2 className="section-heading sm:whitespace-nowrap text-center">
               Guest Experiences at New Tehri
@@ -638,7 +638,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       {/* 7. Locale Section */}
       <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
           <h2 className="section-heading text-center sm:whitespace-nowrap">
             Nearby Attraction in New Tehri

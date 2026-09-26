@@ -187,11 +187,15 @@ export const About: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="section-heading lg:whitespace-nowrap text-center lg:text-left">
-              Moments Made Special
-            </h2>
-            <div className="lg:justify-start flex justify-center">
-              <GoldDivider />
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="inline-flex flex-col items-center text-center">
+                <h2 className="section-heading lg:whitespace-nowrap">
+                  Moments Made Special
+                </h2>
+                <div className="w-full flex justify-center">
+                  <GoldDivider />
+                </div>
+              </div>
             </div>
             <div className="space-y-6 body-text mt-8">
               <p>
@@ -288,7 +292,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-14 sm:mt-16 pt-10 border-t border-luxury-gold/15 text-center max-w-3xl mx-auto w-full"
+            className="mt-8 sm:mt-10 pt-10 border-t border-luxury-gold/15 text-center max-w-3xl mx-auto w-full"
           >
             <span className="section-label mb-3 block text-center">VISION</span>
             
@@ -322,9 +326,9 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
         />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto mb-16">
+          <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10">
             <span className="section-label mb-3">GUEST REVIEWS</span>
-            <h2 className="section-heading !text-white sm:whitespace-nowrap text-center font-normal tracking-wide">
+            <h2 className="section-heading !text-white sm:whitespace-nowrap text-center font-semibold tracking-wide">
               Tehri Lakeview Sunrise Cottages
             </h2>
             <GoldDivider />
@@ -440,7 +444,7 @@ Whether you are visiting for leisure, a family gathering, a romantic getaway, or
       {/* 4. The Locale (Nearby Attractions) Section */}
       <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 flex flex-col items-center justify-center">
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 flex flex-col items-center justify-center">
           <span className="section-label mb-3 text-center">THE LOCALE</span>
           <h2 className="section-heading text-center sm:whitespace-nowrap">
             Nearby Attraction in New Tehri

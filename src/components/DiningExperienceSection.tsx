@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 import { images } from '../config/images';
 
 const GoldDivider: React.FC = () => (
-  <div className="flex items-center justify-center my-6 select-none w-full">
+  <div className="flex items-center justify-center my-3.5 select-none w-full">
     <img 
       src={images.logo.divider} 
       alt="Luxury Gold Divider" 
@@ -129,14 +129,14 @@ export const DiningExperienceSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-6 order-1 lg:order-2 text-left"
           >
-            <h2 className="section-heading text-center lg:text-left mb-2">
+            <h2 className="section-heading text-center sm:whitespace-nowrap mb-2 !text-[clamp(1.5rem,2.8vw+0.5rem,48px)]">
               Taste the Flavors of the Himalayas
             </h2>
-            <div className="flex justify-center lg:justify-start mb-6">
+            <div className="flex justify-center mb-6">
               <GoldDivider />
             </div>
 
-            <div className="space-y-4 body-text text-gray-700 leading-relaxed text-sm sm:text-base mb-8">
+            <div className="space-y-4 body-text text-gray-700 leading-relaxed text-sm sm:text-base mb-8 text-left">
               <p>
                 Savor delicious meals while overlooking the breathtaking beauty of Tehri Lake. Freshly prepared with care, our menu brings together authentic Garhwali flavors and popular Indian favorites, creating a memorable dining experience for every guest.
               </p>
@@ -146,7 +146,7 @@ export const DiningExperienceSection: React.FC = () => {
             </div>
 
             {/* Feature Points in 2-column layout */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 mb-8 text-left">
               <div className="flex items-center space-x-3">
                 <span className="w-5 h-5 rounded-full bg-[#C49A5A]/15 flex items-center justify-center text-[#C49A5A] flex-shrink-0">
                   <Check className="w-3.5 h-3.5 stroke-[2.5]" />
@@ -185,7 +185,7 @@ export const DiningExperienceSection: React.FC = () => {
             </div>
 
             {/* Explore Menu Button */}
-            <div className="flex justify-center lg:justify-start">
+            <div className="flex justify-start">
               <button
                 onClick={() => window.open(images.food.menuPdf, '_blank')}
                 className="btn-typography bg-[#C49A5A] hover:bg-[#A9772B] text-white px-8 py-3.5 rounded shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2 w-full sm:w-auto cursor-pointer"
