@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Star, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 import { images } from '../config/images';
 import homeVideo from '../assets/videos/home video.mp4';
+import { DiningExperienceSection } from '../components/DiningExperienceSection';
 
 // Custom Gold Loop Divider component to match the screenshot decoration
 // Custom Gold Loop Divider component to match the screenshot decoration
@@ -514,50 +515,7 @@ Surrounded by majestic mountains and fresh mountain air, our cottages offer the 
       </section>
 
       {/* 5. Dining Section */}
-      <section className="luxury-section-padding bg-luxury-cream border-t border-luxury-gold/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-12 flex flex-col items-center justify-center">
-          <h2 className="section-heading sm:whitespace-nowrap text-center mb-4">
-            Dining Experience
-          </h2>
-          <GoldDivider />
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Text Info */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="space-y-6 body-text">
-              <p>
-                At Tehri LakeView Sunrise Cottages, our restaurant offers a delightful culinary experience with a variety of Indian, Chinese, and local Uttarakhand dishes. Prepared using fresh ingredients and traditional recipes, every meal is crafted to satisfy your taste and complement your stay amidst the scenic beauty of Tehri Lake.
-              </p>
-              <p>
-                Whether you're starting your day with a hearty breakfast, enjoying a family lunch, or ending the evening with a delicious dinner, our warm hospitality and inviting ambiance ensure a memorable dining experience for every guest.
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Right: Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="overflow-hidden rounded shadow-2xl border-4 border-white"
-          >
-            <img
-              src={images.food.diningBg}
-              alt="Dining Experience at Tehri Lakeview SUNRISE COTTAGES"
-              className="w-full h-80 object-cover hover:scale-103 transition-transform duration-500"
-            />
-          </motion.div>
-        </div>
-        </div>
-      </section>
+      <DiningExperienceSection />
 
       {/* 6. Guest Reviews Section */}
       <section className="luxury-section-padding bg-white border-t border-luxury-gold/10">

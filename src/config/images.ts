@@ -23,6 +23,8 @@ import suiteHome from '../assets/images/rooms/suite_home.jpg';
 import menuPdf from '../assets/Explore menu.pdf';
 import beverageMenu from '../assets/images/food/beverage_menu.jpg';
 import himalayanCurry from '../assets/images/food/himalayan_curry.jpg';
+import specialDish from '../assets/images/food/special_dish.jpg';
+import specialRoti from '../assets/images/food/special_roti.jpg';
 import diningBg from '../assets/images/food/dining_bg.jpg';
 import diningBuffet from '../assets/images/food/dining_buffet.jpg';
 import diningHall from '../assets/images/food/dining_hall.jpg';
@@ -91,6 +93,8 @@ export const images = {
     freshTaste3: diningView,
     himalayanTaste1: beverageMenu,
     himalayanTaste2: himalayanCurry,
+    specialDish: specialDish,
+    specialRoti: specialRoti,
     menu1: menu1,
     menu2: menu2,
     menuPdf: menuPdf,
